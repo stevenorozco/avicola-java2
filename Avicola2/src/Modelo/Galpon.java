@@ -18,8 +18,9 @@ public class Galpon {
     private Granja granja; 
     private Empleado responsable; 
     private HashSet lotes; 
+    private HashSet eventosGalpon; 
 
-    public Galpon(int id, int codigo, String tipo_zona, int capacidad_max_gallinas, Granja granja, Empleado responsable, HashSet lotes) {
+    public Galpon(int id, int codigo, String tipo_zona, int capacidad_max_gallinas, Granja granja, Empleado responsable, HashSet lotes, HashSet eventosGalpon) {
         this.id = id;
         this.codigo = codigo;
         this.tipo_zona = tipo_zona;
@@ -27,7 +28,10 @@ public class Galpon {
         this.granja = granja;
         this.responsable = responsable;
         this.lotes = lotes;
+        this.eventosGalpon = eventosGalpon;
     }
+
+
 
     public int getId() {
         return id;
@@ -81,6 +85,9 @@ public class Galpon {
         return this.lotes.add(lote);
     }
     
+     public boolean adicionarLote(Lote lote){
+        return this.lotes.add(lote);
+    }
              @Override
     public int hashCode() {
         return id; 
