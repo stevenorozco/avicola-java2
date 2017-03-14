@@ -29,8 +29,6 @@ public Controlador(){
     empresa = new Empresa( 1, "avicola");
     
     Area area_granja = new Area(1,"produccion", "Granja",false, empresa);
-        
-
     Area area_planta_alimentos = new Area(2,"produccion", "Planta de Alimentos",false, empresa);
 
     //Creamos las areas de administrativo
