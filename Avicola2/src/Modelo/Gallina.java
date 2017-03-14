@@ -18,8 +18,10 @@ public class Gallina {
     private String proceso; 
     private Galpon galpon; 
     private Lote lote; 
+    private HashSet tratamientos; 
+    private HashSet vacunas; 
 
-    public Gallina(int id, int codigo, String raza, int fecha_nacimiento, String proceso, Galpon galpon, Lote lote) {
+    public Gallina(int id, int codigo, String raza, int fecha_nacimiento, String proceso, Galpon galpon, Lote lote, HashSet tratamientos, HashSet vacunas) {
         this.id = id;
         this.codigo = codigo;
         this.raza = raza;
@@ -27,6 +29,8 @@ public class Gallina {
         this.proceso = proceso;
         this.galpon = galpon;
         this.lote = lote;
+        this.tratamientos = tratamientos;
+        this.vacunas = vacunas;
     }
 
     public int getId() {
@@ -83,6 +87,30 @@ public class Gallina {
 
     public void setLote(Lote lote) {
         this.lote = lote;
+    }
+
+    public HashSet getTratamientos() {
+        return tratamientos;
+    }
+
+    public void setTratamientos(HashSet tratamientos) {
+        this.tratamientos = tratamientos;
+    }
+
+    public HashSet getVacunas() {
+        return vacunas;
+    }
+
+    public void setVacunas(HashSet vacunas) {
+        this.vacunas = vacunas;
+    }
+    
+    public boolean adicionarVacuna(Vacuna vacuna){
+        return this.vacunas.add(vacuna);
+    }
+    
+    public boolean adicionarTratamiento(Tratamiento tratamiento){
+        return this.tratamientos.add(tratamiento);
     }
     
              @Override

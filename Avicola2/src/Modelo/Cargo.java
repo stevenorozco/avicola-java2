@@ -5,6 +5,8 @@
  */
 package Modelo;
 
+import java.util.HashSet;
+
 /**
  *
  * @author Steven
@@ -13,11 +15,13 @@ public class Cargo {
     private int id; 
     private String nombre; 
     private Area area; 
+    private HashSet empleados; 
 
-    public Cargo(int id, String nombre, Area area) {
+    public Cargo(int id, String nombre, Area area, HashSet empleados) {
         this.id = id;
         this.nombre = nombre;
         this.area = area;
+        this.empleados = new HashSet();    
     }
 
     public int getId() {
@@ -43,6 +47,17 @@ public class Cargo {
     public void setArea(Area area) {
         this.area = area;
     }
+
+    public HashSet getEmpleados() {
+        return empleados;
+    }
+
+    public void setEmpleados(HashSet empleados) {
+        this.empleados = empleados;
+    }
     
+     public boolean adicionarEmpleado(Empleado empleado){
+        return this.empleados.add(empleados);
+    }
     
 }

@@ -5,6 +5,7 @@
  */
 package Control;
 import Modelo.*;
+import java.util.HashSet;
 /**
  *
  * @author Steven
@@ -31,12 +32,14 @@ public Controlador(){
 
 
 
-public boolean adicionarArea(int id, String tipo, String nombre, boolean beneficio_cooperativa, Empresa empresa){
-    Area area = new Area(id, tipo, nombre, beneficio_cooperativa, empresa);
+public boolean adicionarArea(int id, String tipo, String nombre, boolean beneficio_cooperativa, Empresa empresa, HashSet cargos){
+    Area area = new Area(id, tipo, nombre, beneficio_cooperativa, empresa, cargos);
     return empresa.adicionarArea(area); 
 }
 
-
+public Empresa getEmpresa(){
+    return this.empresa; 
+}
 
     
     

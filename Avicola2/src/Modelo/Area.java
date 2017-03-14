@@ -5,6 +5,8 @@
  */
 package Modelo;
 
+import java.util.HashSet;
+
 /**
  *
  * @author Steven
@@ -15,14 +17,15 @@ public class Area {
     private String nombre; 
     private boolean beneficio_cooperativa; 
     private Empresa empresa; 
+    private HashSet cargos;
 
-    public Area(int id, String tipo, String nombre, boolean beneficio_cooperativa, Empresa empresa) {
+    public Area(int id, String tipo, String nombre, boolean beneficio_cooperativa, Empresa empresa, HashSet cargos) {
         this.id = id;
         this.tipo = tipo;
         this.nombre = nombre;
         this.beneficio_cooperativa = beneficio_cooperativa;
         this.empresa = empresa; 
-    }
+        this.cargos = new HashSet();    }
 
     public int getId() {
         return id;
@@ -75,5 +78,7 @@ public class Area {
         }
     }
     
-    
+    public boolean adicionarCargo(Cargo cargo){
+        return this.cargos.add(cargo);
+    }
 }

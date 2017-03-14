@@ -15,12 +15,14 @@ public class Lote {
     private int codigo; 
     private int cantidad_gallinas; 
     private int fecha_nacimiento_gallinas; 
+    private HashSet gallinas; 
 
-    public Lote(int id, int codigo, int cantidad_gallinas, int fecha_nacimiento_gallinas) {
+    public Lote(int id, int codigo, int cantidad_gallinas, int fecha_nacimiento_gallinas, HashSet gallinas) {
         this.id = id;
         this.codigo = codigo;
         this.cantidad_gallinas = cantidad_gallinas;
         this.fecha_nacimiento_gallinas = fecha_nacimiento_gallinas;
+        this.gallinas = gallinas;
     }
 
     public int getId() {
@@ -54,8 +56,18 @@ public class Lote {
     public void setFecha_nacimiento_gallinas(int fecha_nacimiento_gallinas) {
         this.fecha_nacimiento_gallinas = fecha_nacimiento_gallinas;
     }
+
+    public HashSet getGallinas() {
+        return gallinas;
+    }
+
+    public void setGallinas(HashSet gallinas) {
+        this.gallinas = gallinas;
+    }
     
-    
+    public boolean adicionarGallina(Gallina gallina){
+        return this.gallinas.add(gallina);
+    }
              @Override
     public int hashCode() {
         return id; 

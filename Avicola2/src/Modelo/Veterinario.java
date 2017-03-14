@@ -10,26 +10,17 @@ import java.util.*;
  *
  * @author Steven
  */
-public class Veterinario {
+public class Veterinario extends Empleado {
     
-    int id; 
     String tipo; 
     int experiencia; 
-    private HashSet empleado; 
+    private HashSet cursos; 
 
-    public Veterinario(int id, String tipo, int experiencia, HashSet empleado) {
-        this.id = id;
+    public Veterinario(String tipo, int experiencia, HashSet cursos, int id, int cedula, String nombre, int tel, String cargo, String nivel_profesional, int salario) {
+        super(id, cedula, nombre, tel, cargo, nivel_profesional, salario);
         this.tipo = tipo;
         this.experiencia = experiencia;
-        this.empleado = empleado;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
+        this.cursos = cursos;
     }
 
     public String getTipo() {
@@ -46,33 +37,19 @@ public class Veterinario {
 
     public void setExperiencia(int experiencia) {
         this.experiencia = experiencia;
-    }
+    }    
 
-    public HashSet getEmpleado() {
-        return empleado;
-    }
-
-    public void setEmpleado(HashSet empleado) {
-        this.empleado = empleado;
+    public HashSet getCursos() {
+        return cursos;
     }
     
-             @Override
-    public int hashCode() {
-        return id; 
+    public boolean adicionarCurso(Curso curso){
+        return this.cursos.add(curso);
     }
 
-    
-    // el método equals es utilizado por los Set para determinar cuando un objeto es igual a otro. 
-    @Override
-    public boolean equals(Object obj) {
-        Veterinario veterinario=(Veterinario)obj;      
-        if(veterinario.id==this.id){
-            // son iguales
-            return true;
-        }
-        else{
-            return false; 
-        }
+    public void setCursos(HashSet cursos) {
+        this.cursos = cursos;
     }
+    
     
 }
