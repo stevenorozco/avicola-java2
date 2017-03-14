@@ -90,6 +90,8 @@ public class Main {
         Gallina gallina3 = new Gallina(3, 1236, "black_rock", 1, "", lote1);
         Gallina gallina4 = new Gallina(4, 1236, "black_rock", 1, "", lote1);
         
+        
+        System.out.print(gallina2.getInfoGallina());
         galpon1.adicionarLote(lote1);
         
         //System.out.println(lote1.getGallinas().size());

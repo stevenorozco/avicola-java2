@@ -12,7 +12,8 @@ import java.util.*;
  */
 public class Gallina {
     private int id;
-    private int codigo; 
+    private int codigo;
+    private int edad_semanas = 0;
     private String raza;
     private int fecha_nacimiento; 
     private String proceso; 
@@ -98,6 +99,10 @@ public class Gallina {
         this.lote.adicionarGallina(this);
     }
 
+    public int getEdad() {
+        return edad_semanas;
+    }
+    
     public HashSet getTratamientos() {
         return tratamientos;
     }
@@ -144,4 +149,16 @@ public class Gallina {
     public String toString(){
         return Integer.toString(this.codigo); 
     }
+    
+    public String getInfoGallina(){
+        String info_gallina;
+        
+        info_gallina = "Edad: "+ this.getEdad() +
+                    "\n" + "Raza: " + this.getRaza() +
+                    "\n" + "Proceso: " + this.getProceso() +
+                    "\n" + "Id: " + this.getId() +
+                    "\n" + "Lote: " + this.getLote().toString();
+        
+        return info_gallina;       
+    }    
 }
