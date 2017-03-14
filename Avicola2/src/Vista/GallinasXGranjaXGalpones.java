@@ -33,7 +33,7 @@ public class GallinasXGranjaXGalpones extends BaseVista {
          //}
          
          //HashSet<Area> as = miControl.getEmpresa().getAreas();
-         System.out.println(miControl.getEmpresa().toString());
+         //System.out.println(miControl.getEmpresa().toString());
          /*int i = 0;
          for (Area obj : as) {
             //System.out.println(obj.getNombre());
