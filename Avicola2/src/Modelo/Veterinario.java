@@ -50,5 +50,9 @@ public class Veterinario extends Empleado {
         this.cursos = cursos;
     }
     
+    public String toString(){
+        return this.nombre + this.cedula; 
+    }
+    
     
 }

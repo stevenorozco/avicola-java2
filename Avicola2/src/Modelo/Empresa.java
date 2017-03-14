@@ -70,4 +70,8 @@ public class Empresa {
         return this.areas.add(area);
     }
     
+    public String toString(){
+        return this.nombre; 
+    }
+    
 }

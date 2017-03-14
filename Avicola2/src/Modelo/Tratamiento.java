@@ -74,4 +74,8 @@ public class Tratamiento {
         }
     }
     
+    public String toString(){
+        return this.descripcion; 
+    }
+    
 }

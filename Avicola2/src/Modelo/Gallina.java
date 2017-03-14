@@ -21,7 +21,7 @@ public class Gallina {
     private HashSet tratamientos; 
     private HashSet vacunas; 
 
-    public Gallina(int id, int codigo, String raza, int fecha_nacimiento, String proceso, Galpon galpon, Lote lote, HashSet tratamientos, HashSet vacunas) {
+    public Gallina(int id, int codigo, String raza, int fecha_nacimiento, String proceso, Galpon galpon, Lote lote) {
         this.id = id;
         this.codigo = codigo;
         this.raza = raza;
@@ -29,8 +29,6 @@ public class Gallina {
         this.proceso = proceso;
         this.galpon = galpon;
         this.lote = lote;
-        this.tratamientos = tratamientos;
-        this.vacunas = vacunas;
     }
 
     public int getId() {
@@ -132,4 +130,7 @@ public class Gallina {
         }
     }
     
+    public String toString(){
+        return Integer.toString(this.codigo); 
+    }
 }

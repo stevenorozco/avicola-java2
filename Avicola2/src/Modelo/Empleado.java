@@ -12,8 +12,8 @@ package Modelo;
 public class Empleado {
     
    private int id; 
-   private int cedula; 
-   private String nombre; 
+   protected int cedula; 
+   protected String nombre; 
    private int tel; 
    private Cargo cargo; 
    private String nivel_profesional; 
@@ -104,5 +104,10 @@ public class Empleado {
             return false; 
         }
     }
+    
+    public String toString(){
+        return this.nombre + this.cedula; 
+    }
+    
     
 }

@@ -94,4 +94,7 @@ public class Vacuna {
         }
     }
     
+     public String toString(){
+        return this.nombre; 
+    }
 }

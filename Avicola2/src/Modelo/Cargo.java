@@ -59,5 +59,9 @@ public class Cargo {
      public boolean adicionarEmpleado(Empleado empleado){
         return this.empleados.add(empleado);
     }
+     
+     public String toString(){
+        return this.nombre; 
+    }
     
 }

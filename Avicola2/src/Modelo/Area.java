@@ -114,4 +114,8 @@ public class Area {
     public boolean adicionarGranja(Granja granja){
         return this.granjas.add(granja);
     }
+    
+    public String toString(){
+        return this.nombre; 
+    }
 }

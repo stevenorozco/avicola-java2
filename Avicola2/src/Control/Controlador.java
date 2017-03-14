@@ -79,6 +79,14 @@ public boolean adicionarEventoGalpon(int id, String descripcion, int fecha, Galp
    // return galpon.adicionarLote(lote);
 //}
 
+public boolean adicionarGallina(int id, int codigo, String raza, int fecha_nacimiento, String proceso, Galpon galpon, Lote lote){
+    Gallina gallina = new Gallina(id, codigo, raza, fecha_nacimiento, proceso, galpon, lote); 
+    return galpon.adicionarGallina(gallina);
+}
+
+public boolean adicionarVacuna(){
+}
+
 
 
 }

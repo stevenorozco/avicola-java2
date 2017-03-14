@@ -85,6 +85,8 @@ public class Lote {
             return false; 
         }
     }
-    
+    public String toString(){
+        return Integer.toString(this.codigo); 
+    }
     
 }
