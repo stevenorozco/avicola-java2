@@ -6,6 +6,7 @@
 package Modelo;
 
 import java.util.HashSet;
+import java.util.Iterator;
 
 /**
  *
@@ -58,11 +59,25 @@ public class Cargo {
         this.empleados = empleados;
     }
     
-     public boolean adicionarEmpleado(Empleado empleado){
+    public boolean adicionarEmpleado(Empleado empleado){
         return this.empleados.add(empleado);
     }
      
-     public String toString(){
+    public boolean eliminarEmpleadoPorId(int id){
+        boolean eliminado=false;
+        Iterator i = this.empleados.iterator();
+        while(i.hasNext()){
+            Empleado empleado = (Empleado)i.next();
+            if(empleado.getId() == id){
+                eliminado = this.empleados.remove(empleado);
+                empleado.setCargo(null);
+            }
+        }
+        return eliminado;
+    }
+    
+    
+    public String toString(){
         return this.nombre; 
     }
     
