@@ -114,9 +114,14 @@ public class CargoVista extends BaseVista {
         System.out.println("hollaa.......");
         System.out.println(this.miControl.getEmpresa().getNombre());
         HashSet<Area> as = this.miControl.getEmpresa().getAreas();
+        
+        jCbbArea.removeAllItems();
         for (Area obj : as) {
             System.out.println(obj.getNombre());
+            jCbbArea.addItem(obj.toString());
         } 
+        
+        //jCbbArea.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         //jCbbArea.setModel();
     }
     

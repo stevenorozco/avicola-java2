@@ -162,12 +162,12 @@ public class AreaVista extends BaseVista {
     }
     
     private void iniciarFormulario(){
-        System.out.println("hollaa.......");
-        System.out.println(this.miControl.getEmpresa().getNombre());
-        HashSet<Area> as = this.miControl.getEmpresa().getAreas();
-        for (Area obj : as) {
-            System.out.println(obj.getNombre());
-        } 
+        //System.out.println("hollaa.......");
+        //System.out.println(this.miControl.getEmpresa().getNombre());
+        //HashSet<Area> as = this.miControl.getEmpresa().getAreas();
+        //for (Area obj : as) {
+        //    System.out.println(obj.getNombre());
+        //} 
         //jCbbArea.setModel();
     }
     //Guardar
@@ -181,7 +181,12 @@ public class AreaVista extends BaseVista {
                 boolean beneficio_cooperativa = jChbBeneficioCooperativa.isSelected();
 
                 miControl.adicionarArea(id, tipo, nombre, beneficio_cooperativa, miControl.getEmpresa());
-                JOptionPane.showMessageDialog(this, "El empleado ya existe ");
+                JOptionPane.showMessageDialog(this, "El Area '"+nombre+"' ha sido guardada exitosamente ");
+                
+                HashSet<Area> as = this.miControl.getEmpresa().getAreas();
+                for (Area obj : as) {
+                    System.out.println(obj.getNombre());
+                } 
             }
         
         }catch(Exception e){
