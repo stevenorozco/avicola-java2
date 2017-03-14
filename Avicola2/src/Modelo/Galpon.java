@@ -125,7 +125,7 @@ public class Galpon {
         }
     }
     
-     public boolean adicionarEventoGalpon(EventoGalpon eventoGalpon){
+    public boolean adicionarEventoGalpon(EventoGalpon eventoGalpon){
         return this.eventosGalpon.add(eventoGalpon);
     }
      
@@ -135,6 +135,10 @@ public class Galpon {
     
     public int getCantidadGallinas(){
         return this.gallinas.size();
+    }
+    
+    public int getPorcentajeUtilizacion(){
+        return (this.getCantidadGallinas() / this.getCapacidad_max_gallinas()) * 100;
     }
     
     public void moverLoteCompleto(Galpon galpon_destino){}

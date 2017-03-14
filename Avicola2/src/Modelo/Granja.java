@@ -59,7 +59,7 @@ public class Granja {
         this.jefe = jefe;
     }
 
-    public HashSet getGalpones() {
+    public HashSet<Galpon> getGalpones() {
         return galpones;
     }
 
@@ -77,6 +77,23 @@ public class Granja {
             total_gallinas_granja += obj.getCantidadGallinas();
         }
         return total_gallinas_granja;
+    }
+    
+    public int getCantidadGalpones(){
+        return this.getGalpones().size();
+    }
+    
+    public int getPorcentajeUtilizacion(){
+        return (this.getCantidadGallinas() / this.getCapacidad_max_gallinas()) * 100;
+    }
+    
+    
+    public void mostrarResumen(){
+        
+        for(Galpon galpon : this.getGalpones())
+        {
+            System.out.println("Galpon" + galpon.getId()+":"+galpon.getCantidadGallinas());
+        }
     }
     
 
