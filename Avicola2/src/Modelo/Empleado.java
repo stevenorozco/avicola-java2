@@ -27,6 +27,7 @@ public class Empleado {
         this.cargo = cargo;
         this.nivel_profesional = nivel_profesional;
         this.salario = salario;
+        this.cargo.adicionarEmpleado(this);
     }
 
     public int getId() {

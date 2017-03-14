@@ -26,6 +26,8 @@ public class Area {
         this.nombre = nombre;
         this.beneficio_cooperativa = beneficio_cooperativa;
         this.empresa = empresa; 
+        this.cargos = new HashSet();
+        this.granjas = new HashSet();
     }
     
     

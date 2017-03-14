@@ -20,6 +20,7 @@ public class Veterinario extends Empleado {
         super(id, cedula, nombre, tel, cargo, nivel_profesional, salario);
         this.tipo = tipo;
         this.experiencia = experiencia;
+        this.cursos = new HashSet();
     }
 
     public String getTipo() {

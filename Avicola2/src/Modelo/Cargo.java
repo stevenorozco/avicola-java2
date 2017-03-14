@@ -21,7 +21,8 @@ public class Cargo {
         this.id = id;
         this.nombre = nombre;
         this.area = area;
-      
+        this.empleados = new HashSet();
+        this.area.adicionarCargo(this);
     }
 
     public int getId() {

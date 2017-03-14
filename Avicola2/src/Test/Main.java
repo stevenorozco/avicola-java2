@@ -1,0 +1,33 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package Test;
+import Modelo.*;
+import java.util.HashSet;
+
+/**
+ *
+ * @author luissalamanca
+ */
+public class Main {
+    public static void main(String[] args) {
+        System.out.println("Hello, World!");
+        
+        Empresa empresa = new Empresa(1, "Avicola");
+        
+        Area area1 = new Area(1,"Administrativo", "Recursos Humanos",false, empresa);
+        Cargo cargo1 = new Cargo(1, "Jefe de Recursos H", area1);
+        Empleado empleado1 = new Empleado(1, 1113650449, "Luis Salamanca", 3123212, cargo1, "Profesional", 3000000);
+        Veterinario veterinario1 = new Veterinario("", 10,1, 1113650449, "Luis Salamanca", 3123212, cargo1, "Profesional", 3000000);
+        Curso curso1 = new Curso(1, "Manejo de Gallinas", "Manejador de gallinas","Instituto", 1,20,veterinario1);
+        
+        System.out.println(veterinario1.getCursos().size());
+        //System.out.println(cargo1.getEmpleados().size());
+        HashSet<Empleado> as = cargo1.getEmpleados();
+        for (Empleado obj : as) {
+            System.out.println(obj.getNombre());
+        } 
+    }
+}

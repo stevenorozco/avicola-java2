@@ -17,9 +17,9 @@ public class Curso {
     private String institucion; 
     private int fecha; 
     private int intensidad_horaria; 
-    private Empleado veterinario; 
+    private Veterinario veterinario; 
 
-    public Curso(int id, String nombre, String titulo, String institucion, int fecha, int intensidad_horaria, Empleado veterinario) {
+    public Curso(int id, String nombre, String titulo, String institucion, int fecha, int intensidad_horaria, Veterinario veterinario) {
         this.id = id;
         this.nombre = nombre;
         this.titulo = titulo;
@@ -27,7 +27,8 @@ public class Curso {
         this.fecha = fecha;
         this.intensidad_horaria = intensidad_horaria;
         this.veterinario = veterinario;
-    }
+        this.veterinario.adicionarCurso(this);
+   }
 
     public int getId() {
         return id;
@@ -81,7 +82,7 @@ public class Curso {
         return veterinario;
     }
 
-    public void setVeterinario(Empleado veterinario) {
+    public void setVeterinario(Veterinario veterinario) {
         this.veterinario = veterinario;
     }
     
