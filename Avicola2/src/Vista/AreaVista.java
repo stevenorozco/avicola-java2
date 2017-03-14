@@ -151,6 +151,13 @@ public class AreaVista extends BaseVista {
             return false;
         }
         
+         if (jTxtId.getText().equals(""))
+        {
+            JOptionPane.showMessageDialog(null,"Debe ingresar un ID");
+            return false;
+        }
+        
+
         return true;
     }
     
