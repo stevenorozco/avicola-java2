@@ -14,10 +14,78 @@ public class Curso {
     private int id; 
     private String nombre; 
     private String titulo; 
-    private String intitucion; 
+    private String institucion; 
     private int fecha; 
     private int intensidad_horaria; 
     private Empleado veterinario; 
+
+    public Curso(int id, String nombre, String titulo, String institucion, int fecha, int intensidad_horaria, Empleado veterinario) {
+        this.id = id;
+        this.nombre = nombre;
+        this.titulo = titulo;
+        this.institucion = institucion;
+        this.fecha = fecha;
+        this.intensidad_horaria = intensidad_horaria;
+        this.veterinario = veterinario;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public String getTitulo() {
+        return titulo;
+    }
+
+    public void setTitulo(String titulo) {
+        this.titulo = titulo;
+    }
+
+    public String getInstitucion() {
+        return institucion;
+    }
+
+    public void setInstitucion(String intitucion) {
+        this.institucion = intitucion;
+    }
+
+    public int getFecha() {
+        return fecha;
+    }
+
+    public void setFecha(int fecha) {
+        this.fecha = fecha;
+    }
+
+    public int getIntensidad_horaria() {
+        return intensidad_horaria;
+    }
+
+    public void setIntensidad_horaria(int intensidad_horaria) {
+        this.intensidad_horaria = intensidad_horaria;
+    }
+
+    public Empleado getVeterinario() {
+        return veterinario;
+    }
+
+    public void setVeterinario(Empleado veterinario) {
+        this.veterinario = veterinario;
+    }
+    
+    
     
              @Override
     public int hashCode() {

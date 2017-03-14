@@ -17,11 +17,11 @@ public class Cargo {
     private Area area; 
     private HashSet empleados; 
 
-    public Cargo(int id, String nombre, Area area, HashSet empleados) {
+    public Cargo(int id, String nombre, Area area) {
         this.id = id;
         this.nombre = nombre;
         this.area = area;
-        this.empleados = new HashSet();    
+      
     }
 
     public int getId() {
@@ -57,7 +57,7 @@ public class Cargo {
     }
     
      public boolean adicionarEmpleado(Empleado empleado){
-        return this.empleados.add(empleados);
+        return this.empleados.add(empleado);
     }
     
 }

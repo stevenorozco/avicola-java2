@@ -15,11 +15,11 @@ public class Empleado {
    private int cedula; 
    private String nombre; 
    private int tel; 
-   private String cargo; 
+   private Cargo cargo; 
    private String nivel_profesional; 
    private int salario;
 
-    public Empleado(int id, int cedula, String nombre, int tel, String cargo, String nivel_profesional, int salario) {
+    public Empleado(int id, int cedula, String nombre, int tel, Cargo cargo, String nivel_profesional, int salario) {
         this.id = id;
         this.cedula = cedula;
         this.nombre = nombre;
@@ -61,13 +61,14 @@ public class Empleado {
         this.tel = tel;
     }
 
-    public String getCargo() {
+    public Cargo getCargo() {
         return cargo;
     }
 
-    public void setCargo(String cargo) {
+    public void setCargo(Cargo cargo) {
         this.cargo = cargo;
     }
+
 
     public String getNivel_profesional() {
         return nivel_profesional;

@@ -16,11 +16,10 @@ public class Veterinario extends Empleado {
     int experiencia; 
     private HashSet cursos; 
 
-    public Veterinario(String tipo, int experiencia, HashSet cursos, int id, int cedula, String nombre, int tel, String cargo, String nivel_profesional, int salario) {
+    public Veterinario(String tipo, int experiencia, int id, int cedula, String nombre, int tel, Cargo cargo, String nivel_profesional, int salario) {
         super(id, cedula, nombre, tel, cargo, nivel_profesional, salario);
         this.tipo = tipo;
         this.experiencia = experiencia;
-        this.cursos = cursos;
     }
 
     public String getTipo() {
