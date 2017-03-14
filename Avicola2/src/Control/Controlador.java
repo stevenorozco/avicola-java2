@@ -144,7 +144,7 @@ public boolean adicionarEventoGalpon(int id, String descripcion, int fecha, Galp
 }
 
 //public boolean adicionarLote(int id, int codigo, int cantidad_gallinas, int fecha_nacimiento_gallinas){
-   // Lote lote = new Lote(id, codigo, cantidad_gallinas, fecha_nacimiento_gallinas);
+   //Lote lote = new Lote(id, codigo, cantidad_gallinas, fecha_nacimiento_gallinas);
    // return galpon.adicionarLote(lote);
 //}
 

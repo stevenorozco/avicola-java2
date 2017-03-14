@@ -5,6 +5,10 @@
  */
 package Vista;
 import Control.Controlador;
+import Modelo.Gallina;
+import Modelo.Lote;
+import java.util.HashSet;
+import javax.swing.JOptionPane;
 /**
  *
  * @author Steven
@@ -41,7 +45,7 @@ public class GallinaVista extends BaseVista {
         jTxtPProceso = new javax.swing.JTextPane();
         jBtnCrearGallina = new javax.swing.JButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         jLabel1.setText("ID");
 
@@ -59,6 +63,11 @@ public class GallinaVista extends BaseVista {
 
         jBtnCrearGallina.setText("Crear Gallina");
         jBtnCrearGallina.setToolTipText("");
+        jBtnCrearGallina.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBtnCrearGallinaActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -114,6 +123,46 @@ public class GallinaVista extends BaseVista {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private boolean validarCampos(){ 
+         if (jTxtID.getText().equals(""))
+        {
+            JOptionPane.showMessageDialog(null,"Debe ingresar un ID");
+            return false;
+        }
+         if (jTxtCodigo.getText().equals(""))
+        {
+            JOptionPane.showMessageDialog(null,"Debe ingresar un codigo");
+            return false;
+        }
+         
+         
+        
+
+        return true;
+    }
+    
+    
+    private void jBtnCrearGallinaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnCrearGallinaActionPerformed
+ try{
+            if (validarCampos()){
+                int id = Integer.parseInt(jTxtID.getText());
+                int codigo = Integer.parseInt(jTxtCodigo.getText());
+                String raza = (String)jCbBRaza.getSelectedItem();
+                int fecha = Integer.parseInt(jTxtFecha.getText());
+                String proceso = jTxtPProceso.getText();
+
+                Lote lote = new Lote(id, codigo, 2, 3);
+                miControl.adicionarGallina(id, codigo, raza, fecha , proceso, lote);
+                JOptionPane.showMessageDialog(this, "La gallina '"+codigo+"' ha sido guardada exitosamente ");
+                
+            }
+        
+        }catch(Exception e){
+            JOptionPane.showMessageDialog(this, "Posibles razones del error: \n-Faltan datos \n-Excediste el limete de 10 digitos en los valores numericos", "ERROR", JOptionPane.ERROR_MESSAGE);
+        }
+              // TODO add your handling code here:
+    }//GEN-LAST:event_jBtnCrearGallinaActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

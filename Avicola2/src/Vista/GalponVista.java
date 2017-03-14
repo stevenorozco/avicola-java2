@@ -5,6 +5,8 @@
  */
 package Vista;
 import Control.Controlador;
+import Modelo.Lote;
+import javax.swing.JOptionPane;
 /**
  *
  * @author Steven
@@ -39,7 +41,7 @@ public class GalponVista extends BaseVista {
         jTxtCantidadMaxGallinas = new javax.swing.JTextField();
         jBtnGenerarGalpon = new javax.swing.JButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         jLabel1.setText("ID");
 
@@ -50,6 +52,11 @@ public class GalponVista extends BaseVista {
         jLabel4.setText("Cantidad Max Gallinas");
 
         jBtnGenerarGalpon.setText("Generar Galpon");
+        jBtnGenerarGalpon.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBtnGenerarGalponActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -100,6 +107,10 @@ public class GalponVista extends BaseVista {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jBtnGenerarGalponActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnGenerarGalponActionPerformed
+
+    }//GEN-LAST:event_jBtnGenerarGalponActionPerformed
 
 
 
