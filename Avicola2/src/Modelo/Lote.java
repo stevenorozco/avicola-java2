@@ -78,9 +78,6 @@ public class Lote {
     
     public void moverLotePorPorcentajeAGalpon(Galpon galpon_destino, float porcentaje){}
     
-        
-    
-    
     @Override
     public int hashCode() {
         return id; 

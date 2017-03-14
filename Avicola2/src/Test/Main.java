@@ -20,6 +20,20 @@ public class Main {
         Empresa empresa = new Empresa(1, "Avicola");
         
         Area area_granja = new Area(1,"produccion", "Granja",false, empresa);
+        
+        
+        //System.out.println(area_granja.getEmpresa().toString());
+        //System.out.println(empresa.getAreas().size());
+        
+        //empresa.getAreas();
+        
+        
+        
+        
+        
+        
+        
+        
         Area area_planta_alimentos = new Area(2,"produccion", "Planta de Alimentos",false, empresa);
 
         //Creamos las areas de administrativo
@@ -52,6 +66,12 @@ public class Main {
         
         //Creamos las areas de produccion
         
+        
+        
+        
+        
+        
+        
         Empleado empleado1 = new Empleado(1, 1113650449, "Luis Salamanca", 3123212, cargo_galponero, "Profesional", 3000000);
         Veterinario veterinario1 = new Veterinario("", 10,1, 1113650449, "Luis Salamanca", 3123212, cargo_veterinario, "Profesional", 3000000);
         Curso curso1 = new Curso(1, "Manejo de Gallinas", "Manejador de gallinas","Instituto", 1,20,veterinario1);
@@ -73,8 +93,8 @@ public class Main {
         galpon1.adicionarLote(lote1);
         
         //System.out.println(lote1.getGallinas().size());
-        System.out.println(granja1.getCantidadGallinas());
-        System.out.println(lote1.getCantidadGallinas());
+        //System.out.println(granja1.getCantidadGallinas());
+        //System.out.println(lote1.getCantidadGallinas());
         //System.out.println(cargo1.getEmpleados().size());
         //HashSet<Empleado> as = cargo_galponero.getEmpleados();
         //for (Empleado obj : as) {

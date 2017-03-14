@@ -14,7 +14,7 @@ import java.util.HashSet;
 public class Empresa {
     private int id; 
     private String nombre; 
-    private HashSet areas; 
+    private HashSet<Area> areas; 
 
     public Empresa(int id, String nombre) {
         this.id = id;
@@ -38,7 +38,7 @@ public class Empresa {
         this.nombre = nombre;
     }
 
-    public HashSet getAreas() {
+    public HashSet<Area> getAreas() {
         return areas;
     }
 
@@ -46,8 +46,11 @@ public class Empresa {
         this.areas = areas;
     }
 
+    public boolean adicionarArea(Area area){
+        return this.areas.add(area);
+    }
     
-            @Override
+    @Override
     public int hashCode() {
         return id; 
     }
@@ -66,9 +69,7 @@ public class Empresa {
         }
     }
     
-    public boolean adicionarArea(Area area){
-        return this.areas.add(area);
-    }
+    
     
     public String toString(){
         return this.nombre; 
