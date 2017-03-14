@@ -84,9 +84,15 @@ public boolean adicionarGallina(int id, int codigo, String raza, int fecha_nacim
     return galpon.adicionarGallina(gallina);
 }
 
-public boolean adicionarVacuna(){
+public boolean adicionarVacuna(int id, String nombre, String novedad, int fecha, Veterinario asistente, Gallina gallina){
+    Vacuna vacuna = new Vacuna(id, nombre, novedad, fecha, asistente, gallina);
+    return gallina.adicionarVacuna(vacuna);
 }
 
+public boolean adicionarTratamiento(int id, String descripcion, int fecha, Gallina gallina){
+    Tratamiento tratamiento = new Tratamiento(id, descripcion, fecha, gallina);
+    return gallina.adicionarTratamiento(tratamiento);
+}
 
 
 }

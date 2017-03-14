@@ -15,10 +15,10 @@ public class Vacuna {
     private String nombre; 
     private String novedad; 
     private int fecha; 
-    private HashSet asistente; 
-    private HashSet gallina; 
+    private Veterinario asistente; 
+    private Gallina gallina; 
 
-    public Vacuna(int id, String nombre, String novedad, int fecha, HashSet asistente, HashSet gallina) {
+    public Vacuna(int id, String nombre, String novedad, int fecha, Veterinario asistente, Gallina gallina) {
         this.id = id;
         this.nombre = nombre;
         this.novedad = novedad;
@@ -59,19 +59,19 @@ public class Vacuna {
         this.fecha = fecha;
     }
 
-    public HashSet getAsistente() {
+    public Veterinario getAsistente() {
         return asistente;
     }
 
-    public void setAsistente(HashSet asistente) {
+    public void setAsistente(Veterinario asistente) {
         this.asistente = asistente;
     }
 
-    public HashSet getGallina() {
+    public Gallina getGallina() {
         return gallina;
     }
 
-    public void setGallina(HashSet gallina) {
+    public void setGallina(Gallina gallina) {
         this.gallina = gallina;
     }
     
