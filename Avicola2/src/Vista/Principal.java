@@ -45,7 +45,7 @@ public class Principal extends javax.swing.JFrame {
         jMnIVacunas = new javax.swing.JMenuItem();
         jMnITratamientos = new javax.swing.JMenuItem();
         jMenu1 = new javax.swing.JMenu();
-        jMenuItem1 = new javax.swing.JMenuItem();
+        jMniGallinasXGalpon = new javax.swing.JMenuItem();
         jMenuItem2 = new javax.swing.JMenuItem();
         jMenuItem3 = new javax.swing.JMenuItem();
         jMenuItem4 = new javax.swing.JMenuItem();
@@ -163,8 +163,13 @@ public class Principal extends javax.swing.JFrame {
 
         jMenu1.setText("Informes");
 
-        jMenuItem1.setText("Gallinas x Granjas y Galpones");
-        jMenu1.add(jMenuItem1);
+        jMniGallinasXGalpon.setText("Gallinas x Granjas y Galpones");
+        jMniGallinasXGalpon.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMniGallinasXGalponActionPerformed(evt);
+            }
+        });
+        jMenu1.add(jMniGallinasXGalpon);
 
         jMenuItem2.setText("Cap. y Util. Granjas y Galpones");
         jMenu1.add(jMenuItem2);
@@ -268,7 +273,7 @@ public class Principal extends javax.swing.JFrame {
     }//GEN-LAST:event_jMnIGallinasActionPerformed
 
     private void jMnIVacunasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMnIVacunasActionPerformed
-         VacunaVista a = new VacunaVista(this.miControl);
+        VacunaVista a = new VacunaVista(this.miControl);
         this.jDesktopPane1.add(a);
         a.show();
     }//GEN-LAST:event_jMnIVacunasActionPerformed
@@ -276,6 +281,12 @@ public class Principal extends javax.swing.JFrame {
     private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jMenuItem3ActionPerformed
+
+    private void jMniGallinasXGalponActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMniGallinasXGalponActionPerformed
+        GallinasXGranjaXGalpones a = new GallinasXGranjaXGalpones(this.miControl);
+        this.jDesktopPane1.add(a);
+        a.show();
+    }//GEN-LAST:event_jMniGallinasXGalponActionPerformed
 
     /**
      * @param args the command line arguments
@@ -320,7 +331,6 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenuBar jMenuBar1;
-    private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JMenuItem jMenuItem3;
     private javax.swing.JMenuItem jMenuItem4;
@@ -334,5 +344,6 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMnITratamientos;
     private javax.swing.JMenuItem jMnIVacunas;
     private javax.swing.JMenuItem jMniEmpleados;
+    private javax.swing.JMenuItem jMniGallinasXGalpon;
     // End of variables declaration//GEN-END:variables
 }
