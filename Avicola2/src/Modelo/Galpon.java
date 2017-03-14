@@ -169,4 +169,18 @@ public class Galpon {
         return Integer.toString(this.codigo); 
     }
     
+    
+     public String getInfoGalpon(){
+        String info_galpon;
+        
+        info_galpon = "Id: "+ this.getId() +
+                    "\n" + "Codigo: " + this.getCodigo() +
+                    "\n" + "Tipo Zona: " + this.getTipo_zona() +
+                    "\n" + "Capacidad Max Gallinas: " + this.getCapacidad_max_gallinas() +
+                    "\n" + "Granja: " + this.getGranja().toString() +
+                   "\n" + "Responsable: " + this.getResponsable().toString();
+        
+        return info_galpon;       
+    }
+    
 }

@@ -100,4 +100,15 @@ public class Lote {
         return Integer.toString(this.codigo); 
     }
     
+    
+       public String getInfoLote(){
+        String info_lote;
+        
+        info_lote = "Id: "+ this.getId() +
+                    "\n" + "Codigo: " + this.getCodigo() +
+                    "\n" + "Cantidad Gallinas: " + this.getCantidadGallinas() +
+                    "\n" + "Fecha Nacimiento Gallinas: " + this.getFecha_nacimiento_gallinas();
+        
+        return info_lote;       
+    }
 }

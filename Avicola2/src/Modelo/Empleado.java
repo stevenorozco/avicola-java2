@@ -126,4 +126,18 @@ public class Empleado {
     }
     
     
+     public String getInfoEmpleado(){
+        String info_empleado;
+        
+        info_empleado = "Id: "+ this.getId() +
+                    "\n" + "Cedula: " + this.getCedula() +
+                    "\n" + "Nombre: " + this.getNombre() +
+                    "\n" + "Telefono: " + this.getTel() +
+                    "\n" + "Cargo: " + this.getCargo() +
+                    "\n" + "Nivel Profesional: " + this.getNivel_profesional() +
+                    "\n" + "Salario: " + this.getSalario();
+        
+        return info_empleado;       
+    }
+    
 }

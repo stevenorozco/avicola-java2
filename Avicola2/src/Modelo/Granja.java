@@ -119,4 +119,18 @@ public class Granja {
     public String toString(){
         return Integer.toString(this.id); 
     }
+    
+    
+    public String getInfoGranja(){
+        String info_granja;
+        
+        info_granja = "Id: "+ this.getId() +
+                    "\n" + "Capacidad Maxima Gallinas: " + this.getCapacidad_max_gallinas() +
+                    "\n" + "Area: " + this.getArea().toString() +
+                    "\n" + "Jefe: " + this.getJefe().toString();
+        
+        return info_granja;     
+}
+    
+    
 }
