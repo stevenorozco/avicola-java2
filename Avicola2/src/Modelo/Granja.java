@@ -22,6 +22,8 @@ public class Granja {
         this.capacidad_max_gallinas = capacidad_max_gallinas;
         this.area = area;
         this.jefe = jefe;
+        
+        this.galpones = new HashSet();
     }
 
     public int getId() {

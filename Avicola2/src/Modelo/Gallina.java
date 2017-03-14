@@ -21,14 +21,18 @@ public class Gallina {
     private HashSet tratamientos; 
     private HashSet vacunas; 
 
-    public Gallina(int id, int codigo, String raza, int fecha_nacimiento, String proceso, Galpon galpon, Lote lote) {
+    public Gallina(int id, int codigo, String raza, int fecha_nacimiento, String proceso, Lote lote) {
         this.id = id;
         this.codigo = codigo;
         this.raza = raza;
         this.fecha_nacimiento = fecha_nacimiento;
         this.proceso = proceso;
-        this.galpon = galpon;
         this.lote = lote;
+        
+        this.tratamientos = new HashSet();
+        this.vacunas = new HashSet();
+        
+        this.lote.adicionarGallina(this);
     }
 
     public int getId() {
@@ -77,6 +81,7 @@ public class Gallina {
 
     public void setGalpon(Galpon galpon) {
         this.galpon = galpon;
+        this.galpon.adicionarGallina(this);
     }
 
     public Lote getLote() {

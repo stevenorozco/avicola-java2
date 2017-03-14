@@ -13,7 +13,7 @@ import java.util.HashSet;
  */
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello, World!");
+        System.out.println("Hello, Worldsss!");
         
         Empresa empresa = new Empresa(1, "Avicola");
         
@@ -27,7 +27,12 @@ public class Main {
         Galpon galpon1 = new Galpon(1, 123456, "levante", 20, granja1, empleado1);
         Lote lote1 = new Lote(1, 1234, 30, 32323);
         
-        System.out.println(veterinario1.getCursos().size());
+        Gallina gallina1 = new Gallina(1, 1234, "Black rock", 1,"", lote1);
+        Gallina gallina2 = new Gallina(2, 1235, "Black rock", 1,"", lote1);
+        Gallina gallina3 = new Gallina(3, 1236, "Black rock", 1,"", lote1);
+        
+        
+        System.out.println(lote1.getGallinas().size());
         //System.out.println(cargo1.getEmpleados().size());
         HashSet<Empleado> as = cargo1.getEmpleados();
         for (Empleado obj : as) {
