@@ -18,10 +18,10 @@ public class Gallina {
     private String proceso; 
     private Galpon galpon; 
     private Lote lote; 
-    private HashSet tratamientos; 
-    private HashSet vacunas; 
+    private HashSet<Tratamiento> tratamientos; 
+    private HashSet<Vacuna> vacunas; 
     
-    Map<String,String> RAZAS = new HashMap<String, String>(){{
+    public static  Map<String,String> RAZAS = new HashMap<String, String>(){{
         put("black_rock", "Black Rock");
         put("speckledy", "Speckledy");
     }};

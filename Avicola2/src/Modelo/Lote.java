@@ -15,7 +15,7 @@ public class Lote {
     private int codigo; 
     private int cantidad_gallinas; 
     private int fecha_nacimiento_gallinas; 
-    private HashSet gallinas; 
+    private HashSet<Gallina> gallinas; 
 
     public Lote(int id, int codigo, int cantidad_gallinas, int fecha_nacimiento_gallinas) {
         this.id = id;
@@ -58,7 +58,7 @@ public class Lote {
         this.fecha_nacimiento_gallinas = fecha_nacimiento_gallinas;
     }
 
-    public HashSet getGallinas() {
+    public HashSet<Gallina> getGallinas() {
         return gallinas;
     }
 
@@ -66,10 +66,19 @@ public class Lote {
         this.gallinas = gallinas;
     }
     
+    public int getCantidadGallinas(){
+        return this.gallinas.size();
+    }
+    
     public boolean adicionarGallina(Gallina gallina){
         return this.gallinas.add(gallina);
     }
-             @Override
+    
+    public void moverLoteCompleto(Galpon galpon_destino){}
+    
+    public void moverLotePorPorcentajeAGalpon(Galpon galpon_destino, float porcentaje){}
+    
+    @Override
     public int hashCode() {
         return id; 
     }

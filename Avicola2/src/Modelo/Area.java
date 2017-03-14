@@ -19,10 +19,10 @@ public class Area {
     private String nombre; 
     private boolean beneficio_cooperativa; 
     private Empresa empresa; 
-    private HashSet cargos;
-    private HashSet granjas;
+    private HashSet<Cargo> cargos;
+    private HashSet<Granja> granjas;
     
-    Map<String,String> TIPOS_AREAS = new HashMap<String, String>(){{
+    public static Map<String,String> TIPOS_AREAS = new HashMap<String, String>(){{
         put("administrativo", "Administrativo");
         put("produccion", "Produccion");
     }};
@@ -33,11 +33,13 @@ public class Area {
         this.nombre = nombre;
         this.beneficio_cooperativa = beneficio_cooperativa;
         this.empresa = empresa; 
+        
         this.cargos = new HashSet();
         this.granjas = new HashSet();
+        
+        //Permite vincular el area actual a la empresa asociada.
+        this.empresa.adicionarArea(this);
     }
-    
-    
 
     public int getId() {
         return id;
@@ -98,7 +100,7 @@ public class Area {
     
     
     
-             @Override
+    @Override
     public int hashCode() {
         return id; 
     }
@@ -125,6 +127,7 @@ public class Area {
         return this.granjas.add(granja);
     }
     
+    //Representar el objeto como un string
     public String toString(){
         return this.nombre; 
     }
