@@ -20,7 +20,7 @@ public class Galpon {
     private HashSet<EventoGalpon> eventosGalpon; 
     private HashSet<Gallina> gallinas; 
     
-    Map<String,String> RAZAS = new HashMap<String, String>(){{
+    Map<String,String> TIPO_ZONA = new HashMap<String, String>(){{
         put("levante", "Zona Levante");
         put("produccion", "Zona Produccion");
     }};

@@ -21,7 +21,7 @@ public class Gallina {
     private HashSet tratamientos; 
     private HashSet vacunas; 
     
-    Map<String,String> RAZAS = new HashMap<String, String>(){{
+    public static  Map<String,String> RAZAS = new HashMap<String, String>(){{
         put("black_rock", "Black Rock");
         put("speckledy", "Speckledy");
     }};

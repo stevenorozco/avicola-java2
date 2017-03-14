@@ -22,7 +22,7 @@ public class Empleado {
    private String nivel_profesional; 
    private int salario;
    
-   Map<String,String> NIVELES_PROFESIONALES = new HashMap<String, String>(){{
+   public static Map<String,String> NIVELES_PROFESIONALES = new HashMap<String, String>(){{
         put("tecnico", "Tecnico");
         put("tecnologo", "Tecnologo");
         put("profesional", "Profesional");

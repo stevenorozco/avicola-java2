@@ -22,7 +22,7 @@ public class Area {
     private HashSet<Cargo> cargos;
     private HashSet<Granja> granjas;
     
-    Map<String,String> TIPOS_AREAS = new HashMap<String, String>(){{
+    public static Map<String,String> TIPOS_AREAS = new HashMap<String, String>(){{
         put("administrativo", "Administrativo");
         put("produccion", "Produccion");
     }};
