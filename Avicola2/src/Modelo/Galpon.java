@@ -85,8 +85,8 @@ public class Galpon {
         return this.lotes.add(lote);
     }
     
-     public boolean adicionarLote(Lote lote){
-        return this.lotes.add(lote);
+     public boolean adicionarEventoGalpon(EventoGalpon eventoGalpon){
+        return this.eventosGalpon.add(eventoGalpon);
     }
              @Override
     public int hashCode() {

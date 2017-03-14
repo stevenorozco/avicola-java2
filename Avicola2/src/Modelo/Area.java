@@ -19,13 +19,15 @@ public class Area {
     private Empresa empresa; 
     private HashSet cargos;
 
-    public Area(int id, String tipo, String nombre, boolean beneficio_cooperativa, Empresa empresa, HashSet cargos) {
+    public Area(int id, String tipo, String nombre, boolean beneficio_cooperativa, Empresa empresa) {
         this.id = id;
         this.tipo = tipo;
         this.nombre = nombre;
         this.beneficio_cooperativa = beneficio_cooperativa;
         this.empresa = empresa; 
-        this.cargos = new HashSet();    }
+    }
+    
+    
 
     public int getId() {
         return id;

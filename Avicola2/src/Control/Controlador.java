@@ -32,8 +32,8 @@ public Controlador(){
 
 
 
-public boolean adicionarArea(int id, String tipo, String nombre, boolean beneficio_cooperativa, Empresa empresa, HashSet cargos){
-    Area area = new Area(id, tipo, nombre, beneficio_cooperativa, empresa, cargos);
+public boolean adicionarArea(int id, String tipo, String nombre, boolean beneficio_cooperativa, Empresa empresa){
+    Area area = new Area(id, tipo, nombre, beneficio_cooperativa, empresa);
     return empresa.adicionarArea(area); 
 }
 
