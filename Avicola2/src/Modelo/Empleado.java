@@ -6,6 +6,7 @@
 package Modelo;
 
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.Map;
 
 /**
@@ -105,6 +106,7 @@ public class Empleado {
         return id; 
     }
 
+    
     
     // el método equals es utilizado por los Set para determinar cuando un objeto es igual a otro. 
     @Override
