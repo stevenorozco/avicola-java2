@@ -10,7 +10,7 @@ import Control.*;
  * @author juan
  */
 public class Principal extends javax.swing.JFrame {
-    private Controlador miControl;
+    private static Controlador miControl;
 
     /**
      * Creates new form Principal
@@ -31,11 +31,12 @@ public class Principal extends javax.swing.JFrame {
 
         jDesktopPane1 = new javax.swing.JDesktopPane();
         jMenuBar1 = new javax.swing.JMenuBar();
-        jMenu1 = new javax.swing.JMenu();
-        jMenuItem1 = new javax.swing.JMenuItem();
-        jMenuItem2 = new javax.swing.JMenuItem();
+        jMenAdmin = new javax.swing.JMenu();
+        jMenAreas = new javax.swing.JMenuItem();
+        JMniCargos = new javax.swing.JMenuItem();
         jMenuItem3 = new javax.swing.JMenuItem();
         jMenuItem4 = new javax.swing.JMenuItem();
+        jMenuItem6 = new javax.swing.JMenuItem();
         jMenu2 = new javax.swing.JMenu();
         jMenuItem5 = new javax.swing.JMenuItem();
 
@@ -52,23 +53,23 @@ public class Principal extends javax.swing.JFrame {
             .addGap(0, 412, Short.MAX_VALUE)
         );
 
-        jMenu1.setText("Producción");
+        jMenAdmin.setText("Administrador");
 
-        jMenuItem1.setText("Empleado");
-        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
+        jMenAreas.setText("Areas");
+        jMenAreas.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem1ActionPerformed(evt);
+                jMenAreasActionPerformed(evt);
             }
         });
-        jMenu1.add(jMenuItem1);
+        jMenAdmin.add(jMenAreas);
 
-        jMenuItem2.setText("Granja");
-        jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
+        JMniCargos.setText("Cargos");
+        JMniCargos.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem2ActionPerformed(evt);
+                JMniCargosActionPerformed(evt);
             }
         });
-        jMenu1.add(jMenuItem2);
+        jMenAdmin.add(JMniCargos);
 
         jMenuItem3.setText("Gallina");
         jMenuItem3.addActionListener(new java.awt.event.ActionListener() {
@@ -76,7 +77,7 @@ public class Principal extends javax.swing.JFrame {
                 jMenuItem3ActionPerformed(evt);
             }
         });
-        jMenu1.add(jMenuItem3);
+        jMenAdmin.add(jMenuItem3);
 
         jMenuItem4.setText("Galpoń");
         jMenuItem4.addActionListener(new java.awt.event.ActionListener() {
@@ -84,9 +85,17 @@ public class Principal extends javax.swing.JFrame {
                 jMenuItem4ActionPerformed(evt);
             }
         });
-        jMenu1.add(jMenuItem4);
+        jMenAdmin.add(jMenuItem4);
 
-        jMenuBar1.add(jMenu1);
+        jMenuItem6.setText("jMen");
+        jMenuItem6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem6ActionPerformed(evt);
+            }
+        });
+        jMenAdmin.add(jMenuItem6);
+
+        jMenuBar1.add(jMenAdmin);
 
         jMenu2.setText("Administración");
 
@@ -116,12 +125,12 @@ public class Principal extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
-        EmpleadoVista a=new EmpleadoVista(this.miControl);
+    private void jMenAreasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenAreasActionPerformed
+        AreaVista a = new AreaVista(this.miControl);
         this.jDesktopPane1.add(a);
         a.show(); 
         
-    }//GEN-LAST:event_jMenuItem1ActionPerformed
+    }//GEN-LAST:event_jMenAreasActionPerformed
 
     private void jMenuItem4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem4ActionPerformed
         // TODO add your handling code here:
@@ -133,15 +142,22 @@ public class Principal extends javax.swing.JFrame {
         
     }//GEN-LAST:event_jMenuItem5ActionPerformed
 
-    private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
+    private void JMniCargosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JMniCargosActionPerformed
         // TODO add your handling code here:
+        CargoVista a = new CargoVista(this.miControl);
+        this.jDesktopPane1.add(a);
+        a.show(); 
         
-    }//GEN-LAST:event_jMenuItem2ActionPerformed
+    }//GEN-LAST:event_JMniCargosActionPerformed
 
     private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
         // TODO add your handling code here:
         
     }//GEN-LAST:event_jMenuItem3ActionPerformed
+
+    private void jMenuItem6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem6ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMenuItem6ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -179,14 +195,15 @@ public class Principal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JMenuItem JMniCargos;
     private javax.swing.JDesktopPane jDesktopPane1;
-    private javax.swing.JMenu jMenu1;
+    private javax.swing.JMenu jMenAdmin;
+    private javax.swing.JMenuItem jMenAreas;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenuBar jMenuBar1;
-    private javax.swing.JMenuItem jMenuItem1;
-    private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JMenuItem jMenuItem3;
     private javax.swing.JMenuItem jMenuItem4;
     private javax.swing.JMenuItem jMenuItem5;
+    private javax.swing.JMenuItem jMenuItem6;
     // End of variables declaration//GEN-END:variables
 }
