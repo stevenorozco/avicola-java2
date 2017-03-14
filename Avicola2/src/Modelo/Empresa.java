@@ -5,6 +5,8 @@
  */
 package Modelo;
 
+import java.util.HashSet;
+
 /**
  *
  * @author Steven
@@ -12,10 +14,12 @@ package Modelo;
 public class Empresa {
     private int id; 
     private String nombre; 
+    private HashSet areas; 
 
     public Empresa(int id, String nombre) {
         this.id = id;
         this.nombre = nombre;
+        this.areas = new HashSet();
     }
 
     public int getId() {
@@ -34,6 +38,15 @@ public class Empresa {
         this.nombre = nombre;
     }
 
+    public HashSet getAreas() {
+        return areas;
+    }
+
+    public void setAreas(HashSet areas) {
+        this.areas = areas;
+    }
+
+    
             @Override
     public int hashCode() {
         return id; 
@@ -52,4 +65,9 @@ public class Empresa {
             return false; 
         }
     }
+    
+    public boolean adicionarArea(Area area){
+        return this.areas.add(area);
+    }
+    
 }

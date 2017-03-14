@@ -14,12 +14,14 @@ public class Area {
     private String tipo; 
     private String nombre; 
     private boolean beneficio_cooperativa; 
+    private Empresa empresa; 
 
-    public Area(int id, String tipo, String nombre, boolean beneficio_cooperativa) {
+    public Area(int id, String tipo, String nombre, boolean beneficio_cooperativa, Empresa empresa) {
         this.id = id;
         this.tipo = tipo;
         this.nombre = nombre;
         this.beneficio_cooperativa = beneficio_cooperativa;
+        this.empresa = empresa; 
     }
 
     public int getId() {

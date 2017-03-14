@@ -25,8 +25,17 @@ public class Controlador {
     Tratamiento tratamiento; 
 
 public Controlador(){
+    empresa = new Empresa( 1, "avicola");
     
 }   
+
+
+
+public boolean adicionarArea(int id, String tipo, String nombre, boolean beneficio_cooperativa, Empresa empresa){
+    Area area = new Area(id, tipo, nombre, beneficio_cooperativa, empresa);
+    return empresa.adicionarArea(area); 
+}
+
 
 
     
