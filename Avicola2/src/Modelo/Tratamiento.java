@@ -55,5 +55,23 @@ public class Tratamiento {
         this.gallina = gallina;
     }
     
+             @Override
+    public int hashCode() {
+        return id; 
+    }
+
+    
+    // el método equals es utilizado por los Set para determinar cuando un objeto es igual a otro. 
+    @Override
+    public boolean equals(Object obj) {
+        Tratamiento tratamiento=(Tratamiento)obj;      
+        if(tratamiento.id==this.id){
+            // son iguales
+            return true;
+        }
+        else{
+            return false; 
+        }
+    }
     
 }

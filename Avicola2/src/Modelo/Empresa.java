@@ -34,5 +34,22 @@ public class Empresa {
         this.nombre = nombre;
     }
 
-   
+            @Override
+    public int hashCode() {
+        return id; 
+    }
+
+    
+    // el método equals es utilizado por los Set para determinar cuando un objeto es igual a otro. 
+    @Override
+    public boolean equals(Object obj) {
+        Empresa empresa=(Empresa)obj;      
+        if(empresa.id==this.id){
+            // son iguales
+            return true;
+        }
+        else{
+            return false; 
+        }
+    }
 }

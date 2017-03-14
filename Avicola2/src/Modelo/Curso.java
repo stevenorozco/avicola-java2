@@ -19,6 +19,24 @@ public class Curso {
     private int intensidad_horaria; 
     private Empleado veterinario; 
     
+             @Override
+    public int hashCode() {
+        return id; 
+    }
+
+    
+    // el método equals es utilizado por los Set para determinar cuando un objeto es igual a otro. 
+    @Override
+    public boolean equals(Object obj) {
+        Curso curso=(Curso)obj;      
+        if(curso.id==this.id){
+            // son iguales
+            return true;
+        }
+        else{
+            return false; 
+        }
+    }
     
 }
 

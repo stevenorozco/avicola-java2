@@ -54,7 +54,24 @@ public class Area {
         this.beneficio_cooperativa = beneficio_cooperativa;
     }
     
+             @Override
+    public int hashCode() {
+        return id; 
+    }
+
     
+    // el método equals es utilizado por los Set para determinar cuando un objeto es igual a otro. 
+    @Override
+    public boolean equals(Object obj) {
+        Area area=(Area)obj;      
+        if(area.id==this.id){
+            // son iguales
+            return true;
+        }
+        else{
+            return false; 
+        }
+    }
     
     
 }

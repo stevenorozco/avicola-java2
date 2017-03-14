@@ -75,6 +75,23 @@ public class Galpon {
         this.responsable = responsable;
     }
     
+             @Override
+    public int hashCode() {
+        return id; 
+    }
+
     
+    // el método equals es utilizado por los Set para determinar cuando un objeto es igual a otro. 
+    @Override
+    public boolean equals(Object obj) {
+        Galpon galpon=(Galpon)obj;      
+        if(galpon.id==this.id){
+            // son iguales
+            return true;
+        }
+        else{
+            return false; 
+        }
+    }
     
 }

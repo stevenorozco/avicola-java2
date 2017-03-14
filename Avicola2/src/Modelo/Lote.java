@@ -56,7 +56,24 @@ public class Lote {
     }
     
     
+             @Override
+    public int hashCode() {
+        return id; 
+    }
+
     
+    // el método equals es utilizado por los Set para determinar cuando un objeto es igual a otro. 
+    @Override
+    public boolean equals(Object obj) {
+        Lote lote=(Lote)obj;      
+        if(lote.id==this.id){
+            // son iguales
+            return true;
+        }
+        else{
+            return false; 
+        }
+    }
     
     
 }

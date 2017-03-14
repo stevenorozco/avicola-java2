@@ -85,6 +85,23 @@ public class Gallina {
         this.lote = lote;
     }
     
+             @Override
+    public int hashCode() {
+        return id; 
+    }
+
     
+    // el método equals es utilizado por los Set para determinar cuando un objeto es igual a otro. 
+    @Override
+    public boolean equals(Object obj) {
+        Gallina gallina=(Gallina)obj;      
+        if(gallina.id==this.id){
+            // son iguales
+            return true;
+        }
+        else{
+            return false; 
+        }
+    }
     
 }

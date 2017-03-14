@@ -56,6 +56,23 @@ public class Veterinario {
         this.empleado = empleado;
     }
     
+             @Override
+    public int hashCode() {
+        return id; 
+    }
+
     
+    // el método equals es utilizado por los Set para determinar cuando un objeto es igual a otro. 
+    @Override
+    public boolean equals(Object obj) {
+        Veterinario veterinario=(Veterinario)obj;      
+        if(veterinario.id==this.id){
+            // son iguales
+            return true;
+        }
+        else{
+            return false; 
+        }
+    }
     
 }
