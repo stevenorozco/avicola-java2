@@ -21,6 +21,8 @@ public class Tratamiento {
         this.descripcion = descripcion;
         this.fecha = fecha;
         this.gallina = gallina;
+        
+        this.gallina.adicionarTratamiento(this);
     }
 
     public int getId() {

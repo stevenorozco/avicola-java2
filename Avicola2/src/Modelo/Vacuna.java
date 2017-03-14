@@ -25,6 +25,8 @@ public class Vacuna {
         this.fecha = fecha;
         this.asistente = asistente;
         this.gallina = gallina;
+        
+        this.gallina.adicionarVacuna(this);
     }
 
     public int getId() {
