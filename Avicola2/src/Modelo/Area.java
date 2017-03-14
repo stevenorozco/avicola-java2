@@ -18,6 +18,7 @@ public class Area {
     private boolean beneficio_cooperativa; 
     private Empresa empresa; 
     private HashSet cargos;
+    private HashSet granjas;
 
     public Area(int id, String tipo, String nombre, boolean beneficio_cooperativa, Empresa empresa) {
         this.id = id;
@@ -60,6 +61,32 @@ public class Area {
     public void setBeneficio_cooperativa(boolean beneficio_cooperativa) {
         this.beneficio_cooperativa = beneficio_cooperativa;
     }
+
+    public Empresa getEmpresa() {
+        return empresa;
+    }
+
+    public void setEmpresa(Empresa empresa) {
+        this.empresa = empresa;
+    }
+
+    public HashSet getCargos() {
+        return cargos;
+    }
+
+    public void setCargos(HashSet cargos) {
+        this.cargos = cargos;
+    }
+
+    public HashSet getGranjas() {
+        return granjas;
+    }
+
+    public void setGranjas(HashSet granjas) {
+        this.granjas = granjas;
+    }
+    
+    
     
              @Override
     public int hashCode() {
@@ -82,5 +109,9 @@ public class Area {
     
     public boolean adicionarCargo(Cargo cargo){
         return this.cargos.add(cargo);
+    }
+    
+    public boolean adicionarGranja(Granja granja){
+        return this.granjas.add(granja);
     }
 }

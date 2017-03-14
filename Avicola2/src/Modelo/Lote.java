@@ -17,12 +17,11 @@ public class Lote {
     private int fecha_nacimiento_gallinas; 
     private HashSet gallinas; 
 
-    public Lote(int id, int codigo, int cantidad_gallinas, int fecha_nacimiento_gallinas, HashSet gallinas) {
+    public Lote(int id, int codigo, int cantidad_gallinas, int fecha_nacimiento_gallinas) {
         this.id = id;
         this.codigo = codigo;
         this.cantidad_gallinas = cantidad_gallinas;
         this.fecha_nacimiento_gallinas = fecha_nacimiento_gallinas;
-        this.gallinas = gallinas;
     }
 
     public int getId() {

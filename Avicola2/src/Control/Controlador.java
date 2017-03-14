@@ -58,7 +58,27 @@ public boolean adicionarCurso(int id, String nombre, String titulo, String insti
     Curso curso = new Curso(id, nombre, titulo, institucion, fecha, intensidad_horaria, veterinario);
     return veterinario.adicionarCurso(curso);
 }
-   
-    
-    
+
+public boolean adicionarGranja(int id, int capacidad_max_gallinas, Area area, Empleado jefe){
+    Granja granja = new Granja(id, capacidad_max_gallinas, area, jefe);
+    return area.adicionarGranja(granja);
+}
+
+public boolean adicionarGalpon(int id, int codigo, String tipo_zona, int capacidad_max_gallinas, Granja granja, Empleado responsable){
+    Galpon galpon = new Galpon(id, codigo, tipo_zona, capacidad_max_gallinas, granja, responsable);
+    return granja.adicionarGalpon(galpon);
+}
+
+public boolean adicionarEventoGalpon(int id, String descripcion, int fecha, Galpon galpon){
+    EventoGalpon eventoGalpon = new EventoGalpon(id, descripcion, fecha, galpon);
+    return galpon.adicionarEventoGalpon(eventoGalpon); 
+}
+
+//public boolean adicionarLote(int id, int codigo, int cantidad_gallinas, int fecha_nacimiento_gallinas){
+   // Lote lote = new Lote(id, codigo, cantidad_gallinas, fecha_nacimiento_gallinas);
+   // return galpon.adicionarLote(lote);
+//}
+
+
+
 }

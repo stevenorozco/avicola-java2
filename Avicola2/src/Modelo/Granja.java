@@ -17,12 +17,11 @@ public class Granja {
     private Empleado jefe;
     private HashSet galpones; 
 
-    public Granja(int id, int capacidad_max_gallinas, Area area, Empleado jefe, HashSet galpones) {
+    public Granja(int id, int capacidad_max_gallinas, Area area, Empleado jefe) {
         this.id = id;
         this.capacidad_max_gallinas = capacidad_max_gallinas;
         this.area = area;
         this.jefe = jefe;
-        this.galpones = galpones;
     }
 
     public int getId() {

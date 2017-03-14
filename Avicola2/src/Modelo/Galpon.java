@@ -20,15 +20,13 @@ public class Galpon {
     private HashSet lotes; 
     private HashSet eventosGalpon; 
 
-    public Galpon(int id, int codigo, String tipo_zona, int capacidad_max_gallinas, Granja granja, Empleado responsable, HashSet lotes, HashSet eventosGalpon) {
+    public Galpon(int id, int codigo, String tipo_zona, int capacidad_max_gallinas, Granja granja, Empleado responsable) {
         this.id = id;
         this.codigo = codigo;
         this.tipo_zona = tipo_zona;
         this.capacidad_max_gallinas = capacidad_max_gallinas;
         this.granja = granja;
         this.responsable = responsable;
-        this.lotes = lotes;
-        this.eventosGalpon = eventosGalpon;
     }
 
 
