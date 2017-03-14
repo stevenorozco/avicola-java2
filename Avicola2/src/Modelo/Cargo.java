@@ -15,7 +15,7 @@ public class Cargo {
     private int id; 
     private String nombre; 
     private Area area; 
-    private HashSet empleados; 
+    private HashSet<Empleado> empleados; 
 
     public Cargo(int id, String nombre, Area area) {
         this.id = id;

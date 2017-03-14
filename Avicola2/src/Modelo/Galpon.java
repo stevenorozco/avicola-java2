@@ -109,6 +109,7 @@ public class Galpon {
     public boolean adicionarLote(Lote lote){
         
         try{
+            //Verificamos si el lote posee gallinas
             if(lote.getGallinas().size() > 0)
             {
                 for (Gallina gall : lote.getGallinas()) {
@@ -118,7 +119,6 @@ public class Galpon {
             }
             else
                 return false;
-            
         }
         catch(Exception ex){
             return false;
