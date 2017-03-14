@@ -9,7 +9,7 @@ package Vista;
  *
  * @author Steven
  */
-public class EventoGalponVista extends javax.swing.JFrame {
+public class EventoGalponVista extends BaseVista {
 
     /**
      * Creates new form EventoGalponVista
