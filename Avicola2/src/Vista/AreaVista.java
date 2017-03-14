@@ -20,7 +20,7 @@ public class AreaVista extends BaseVista {
      * Creates new form AreaVista
      */
     public AreaVista(Controlador c) {
-        this.miControl = new Controlador();
+        this.miControl = c;
         initComponents();
         iniciarFormulario();
     }

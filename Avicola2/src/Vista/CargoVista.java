@@ -19,7 +19,7 @@ public class CargoVista extends BaseVista {
      * Creates new form AreaVista
      */
     public CargoVista(Controlador c) {
-        this.miControl = new Controlador();
+        this.miControl = c;
         initComponents();
         iniciarFormulario();
     }

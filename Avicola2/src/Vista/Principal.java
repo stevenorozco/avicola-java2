@@ -106,18 +106,43 @@ public class Principal extends javax.swing.JFrame {
         jMenu2.add(jMnIGranjas);
 
         jMnIGalpones.setText("Galpones");
+        jMnIGalpones.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMnIGalponesActionPerformed(evt);
+            }
+        });
         jMenu2.add(jMnIGalpones);
 
         jMnIEventosGalpones.setText("Eventos Galpones");
+        jMnIEventosGalpones.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMnIEventosGalponesActionPerformed(evt);
+            }
+        });
         jMenu2.add(jMnIEventosGalpones);
 
         jMnILote.setText("Lotes");
+        jMnILote.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMnILoteActionPerformed(evt);
+            }
+        });
         jMenu2.add(jMnILote);
 
         jMnIGallinas.setText("Gallinas");
+        jMnIGallinas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMnIGallinasActionPerformed(evt);
+            }
+        });
         jMenu2.add(jMnIGallinas);
 
         jMnIVacunas.setText("Vacunas");
+        jMnIVacunas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMnIVacunasActionPerformed(evt);
+            }
+        });
         jMenu2.add(jMnIVacunas);
 
         jMnITratamientos.setText("Tratamientos");
@@ -155,12 +180,16 @@ public class Principal extends javax.swing.JFrame {
 
     private void jMnICursosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMnICursosActionPerformed
         // TODO add your handling code here:
-        
+         CursoVista a = new CursoVista(this.miControl);
+        this.jDesktopPane1.add(a);
+        a.show();
     }//GEN-LAST:event_jMnICursosActionPerformed
 
     private void jMnIGranjasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMnIGranjasActionPerformed
         // TODO add your handling code here:
-        
+        GranjaVista a = new GranjaVista(this.miControl);
+        this.jDesktopPane1.add(a);
+        a.show(); 
     }//GEN-LAST:event_jMnIGranjasActionPerformed
 
     private void JMniCargosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JMniCargosActionPerformed
@@ -179,8 +208,40 @@ public class Principal extends javax.swing.JFrame {
     }//GEN-LAST:event_jMniEmpleadosActionPerformed
 
     private void jMnITratamientosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMnITratamientosActionPerformed
-        // TODO add your handling code here:
+        TratamientoVista a = new TratamientoVista(this.miControl);
+        this.jDesktopPane1.add(a);
+        a.show();
     }//GEN-LAST:event_jMnITratamientosActionPerformed
+
+    private void jMnIGalponesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMnIGalponesActionPerformed
+        GalponVista a = new GalponVista(this.miControl);
+        this.jDesktopPane1.add(a);
+        a.show();
+    }//GEN-LAST:event_jMnIGalponesActionPerformed
+
+    private void jMnIEventosGalponesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMnIEventosGalponesActionPerformed
+       EventoGalponVista a = new EventoGalponVista(this.miControl);
+        this.jDesktopPane1.add(a);
+        a.show();
+    }//GEN-LAST:event_jMnIEventosGalponesActionPerformed
+
+    private void jMnILoteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMnILoteActionPerformed
+       LoteVista a = new LoteVista(this.miControl);
+        this.jDesktopPane1.add(a);
+        a.show();
+    }//GEN-LAST:event_jMnILoteActionPerformed
+
+    private void jMnIGallinasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMnIGallinasActionPerformed
+        GallinaVista a = new GallinaVista(this.miControl);
+        this.jDesktopPane1.add(a);
+        a.show();
+    }//GEN-LAST:event_jMnIGallinasActionPerformed
+
+    private void jMnIVacunasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMnIVacunasActionPerformed
+         VacunaVista a = new VacunaVista(this.miControl);
+        this.jDesktopPane1.add(a);
+        a.show();
+    }//GEN-LAST:event_jMnIVacunasActionPerformed
 
     /**
      * @param args the command line arguments
