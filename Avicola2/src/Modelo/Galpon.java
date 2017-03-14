@@ -17,8 +17,8 @@ public class Galpon {
     private int capacidad_max_gallinas;
     private Granja granja; 
     private Empleado responsable; 
-    private HashSet eventosGalpon; 
-    private HashSet gallinas; 
+    private HashSet<EventoGalpon> eventosGalpon; 
+    private HashSet<Gallina> gallinas; 
     
     Map<String,String> RAZAS = new HashMap<String, String>(){{
         put("levante", "Zona Levante");
@@ -106,11 +106,24 @@ public class Galpon {
         this.gallinas = gallinas;
     }
     
-    
-    
-    //public boolean adicionarLote(Lote lote){
-    //    return this.lotes.add(lote);
-    //}
+    public boolean adicionarLote(Lote lote){
+        
+        try{
+            if(lote.getGallinas().size() > 0)
+            {
+                for (Gallina gall : lote.getGallinas()) {
+                    this.adicionarGallina(gall);
+                }
+                return true;
+            }
+            else
+                return false;
+            
+        }
+        catch(Exception ex){
+            return false;
+        }
+    }
     
      public boolean adicionarEventoGalpon(EventoGalpon eventoGalpon){
         return this.eventosGalpon.add(eventoGalpon);
@@ -118,9 +131,18 @@ public class Galpon {
      
     public boolean adicionarGallina(Gallina gallina){
         return this.gallinas.add(gallina);
-    } 
+    }
+    
+    public int getCantidadGallinas(){
+        return this.gallinas.size();
+    }
+    
+    public void moverLoteCompleto(Galpon galpon_destino){}
+    
+    public void moverLotePorPorcentajeAGalpon(Galpon galpon_destino, float porcentaje){}
      
-             @Override
+    
+    @Override
     public int hashCode() {
         return id; 
     }

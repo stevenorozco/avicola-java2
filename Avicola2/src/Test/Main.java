@@ -70,11 +70,15 @@ public class Main {
         Gallina gallina3 = new Gallina(3, 1236, "black_rock", 1, "", lote1);
         Gallina gallina4 = new Gallina(4, 1236, "black_rock", 1, "", lote1);
         
-        System.out.println(lote1.getGallinas().size());
+        galpon1.adicionarLote(lote1);
+        
+        //System.out.println(lote1.getGallinas().size());
+        System.out.println(granja1.getCantidadGallinas());
+        System.out.println(lote1.getCantidadGallinas());
         //System.out.println(cargo1.getEmpleados().size());
-        HashSet<Empleado> as = cargo_galponero.getEmpleados();
-        for (Empleado obj : as) {
-            System.out.println(obj.getNombre());
-        } 
+        //HashSet<Empleado> as = cargo_galponero.getEmpleados();
+        //for (Empleado obj : as) {
+        //    System.out.println(obj.getNombre());
+        //} 
     }
 }

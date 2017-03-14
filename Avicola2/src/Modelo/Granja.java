@@ -15,7 +15,7 @@ public class Granja {
     private int capacidad_max_gallinas;
     private  Area area; 
     private Empleado jefe;
-    private HashSet galpones; 
+    private HashSet<Galpon> galpones; 
 
     public Granja(int id, int capacidad_max_gallinas, Area area, Empleado jefe) {
         this.id = id;
@@ -71,7 +71,16 @@ public class Granja {
         return this.galpones.add(galpon);
     }
     
-         @Override
+    public int getCantidadGallinas(){
+        int total_gallinas_granja = 0;
+        for (Galpon obj : this.galpones) {
+            total_gallinas_granja += obj.getCantidadGallinas();
+        }
+        return total_gallinas_granja;
+    }
+    
+
+    @Override
     public int hashCode() {
         return id; 
     }
