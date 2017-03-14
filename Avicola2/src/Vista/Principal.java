@@ -44,6 +44,8 @@ public class Principal extends javax.swing.JFrame {
         jMnIGallinas = new javax.swing.JMenuItem();
         jMnIVacunas = new javax.swing.JMenuItem();
         jMnITratamientos = new javax.swing.JMenuItem();
+        jMenu1 = new javax.swing.JMenu();
+        jMenuItem1 = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -154,6 +156,13 @@ public class Principal extends javax.swing.JFrame {
         jMenu2.add(jMnITratamientos);
 
         jMenuBar1.add(jMenu2);
+
+        jMenu1.setText("Informes");
+
+        jMenuItem1.setText("Gallinas x Granjas y Galpones");
+        jMenu1.add(jMenuItem1);
+
+        jMenuBar1.add(jMenu1);
 
         setJMenuBar(jMenuBar1);
 
@@ -283,8 +292,10 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JDesktopPane jDesktopPane1;
     private javax.swing.JMenu jMenAdmin;
     private javax.swing.JMenuItem jMenAreas;
+    private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMnICursos;
     private javax.swing.JMenuItem jMnIEventosGalpones;
     private javax.swing.JMenuItem jMnIGallinas;
