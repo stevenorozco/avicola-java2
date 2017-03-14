@@ -48,6 +48,7 @@ public class Granja {
 
     public void setArea(Area area) {
         this.area = area;
+        this.area.adicionarGranja(this);
     }
 
     public Empleado getJefe() {

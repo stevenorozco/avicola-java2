@@ -47,6 +47,7 @@ public class Cargo {
 
     public void setArea(Area area) {
         this.area = area;
+        this.area.adicionarCargo(this);
     }
 
     public HashSet getEmpleados() {

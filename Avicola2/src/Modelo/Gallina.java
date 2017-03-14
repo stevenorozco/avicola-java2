@@ -90,6 +90,7 @@ public class Gallina {
 
     public void setLote(Lote lote) {
         this.lote = lote;
+        this.lote.adicionarGallina(this);
     }
 
     public HashSet getTratamientos() {

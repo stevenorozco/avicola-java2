@@ -55,6 +55,7 @@ public class Tratamiento {
 
     public void setGallina(Gallina gallina) {
         this.gallina = gallina;
+        this.gallina.adicionarTratamiento(this);
     }
     
              @Override

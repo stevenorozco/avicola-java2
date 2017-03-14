@@ -68,6 +68,7 @@ public class Empleado {
 
     public void setCargo(Cargo cargo) {
         this.cargo = cargo;
+        this.cargo.adicionarEmpleado(this);
     }
 
 

@@ -74,6 +74,7 @@ public class Galpon {
 
     public void setGranja(Granja granja) {
         this.granja = granja;
+        this.granja.adicionarGalpon(this);
     }
 
     public Empleado getResponsable() {

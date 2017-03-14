@@ -70,6 +70,7 @@ public class Area {
 
     public void setEmpresa(Empresa empresa) {
         this.empresa = empresa;
+        this.empresa.adicionarArea(this);
     }
 
     public HashSet getCargos() {

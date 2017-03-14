@@ -75,6 +75,7 @@ public class Vacuna {
 
     public void setGallina(Gallina gallina) {
         this.gallina = gallina;
+        this.gallina.adicionarVacuna(this);
     }
     
              @Override

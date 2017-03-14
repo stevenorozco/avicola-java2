@@ -84,6 +84,7 @@ public class Curso {
 
     public void setVeterinario(Veterinario veterinario) {
         this.veterinario = veterinario;
+        this.veterinario.adicionarCurso(this);
     }
     
     
