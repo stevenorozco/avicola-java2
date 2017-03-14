@@ -15,6 +15,11 @@ public class Veterinario extends Empleado {
     String tipo; 
     int experiencia; 
     private HashSet cursos; 
+    
+    Map<String,String> TIPOS_VETERINARIOS = new HashMap<String, String>(){{
+        put("experto", "Experto");
+        put("auxiliar", "Auxiliar");
+    }};
 
     public Veterinario(String tipo, int experiencia, int id, int cedula, String nombre, int tel, Cargo cargo, String nivel_profesional, int salario) {
         super(id, cedula, nombre, tel, cargo, nivel_profesional, salario);

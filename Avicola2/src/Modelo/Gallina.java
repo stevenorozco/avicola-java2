@@ -20,6 +20,11 @@ public class Gallina {
     private Lote lote; 
     private HashSet tratamientos; 
     private HashSet vacunas; 
+    
+    Map<String,String> RAZAS = new HashMap<String, String>(){{
+        put("black_rock", "Black Rock");
+        put("speckledy", "Speckledy");
+    }};
 
     public Gallina(int id, int codigo, String raza, int fecha_nacimiento, String proceso, Lote lote) {
         this.id = id;

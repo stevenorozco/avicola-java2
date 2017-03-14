@@ -5,7 +5,9 @@
  */
 package Modelo;
 
+import java.util.HashMap;
 import java.util.HashSet;
+import java.util.Map;
 
 /**
  *
@@ -19,6 +21,11 @@ public class Area {
     private Empresa empresa; 
     private HashSet cargos;
     private HashSet granjas;
+    
+    Map<String,String> TIPOS_AREAS = new HashMap<String, String>(){{
+        put("administrativo", "Administrativo");
+        put("produccion", "Produccion");
+    }};
 
     public Area(int id, String tipo, String nombre, boolean beneficio_cooperativa, Empresa empresa) {
         this.id = id;

@@ -17,7 +17,7 @@ public class Main {
         
         Empresa empresa = new Empresa(1, "Avicola");
         
-        Area area1 = new Area(1,"Administrativo", "Recursos Humanos",false, empresa);
+        Area area1 = new Area(1,"administrativo", "Recursos Humanos",false, empresa);
         
         Cargo cargo1 = new Cargo(1, "Jefe de Recursos H", area1);
         
@@ -29,9 +29,9 @@ public class Main {
         Galpon galpon1 = new Galpon(1, 123456, "levante", 20, granja1, empleado1);
         Lote lote1 = new Lote(1, 1234, 30, 32323);
         
-        Gallina gallina1 = new Gallina(1, 1234, "Black rock", 1,"", lote1);
-        Gallina gallina2 = new Gallina(2, 1235, "Black rock", 1,"", lote1);
-        Gallina gallina3 = new Gallina(3, 1236, "Black rock", 1,"", lote1);
+        Gallina gallina1 = new Gallina(1, 1234, "black_rock", 1, "", lote1);
+        Gallina gallina2 = new Gallina(2, 1235, "black_rock", 1, "", lote1);
+        Gallina gallina3 = new Gallina(3, 1236, "black_rock", 1, "", lote1);
         
         System.out.println(lote1.getGallinas().size());
         //System.out.println(cargo1.getEmpleados().size());

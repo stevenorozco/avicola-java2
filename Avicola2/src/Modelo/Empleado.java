@@ -5,6 +5,9 @@
  */
 package Modelo;
 
+import java.util.HashMap;
+import java.util.Map;
+
 /**
  *
  * @author Steven
@@ -18,6 +21,15 @@ public class Empleado {
    private Cargo cargo; 
    private String nivel_profesional; 
    private int salario;
+   
+   Map<String,String> NIVELES_PROFESIONALES = new HashMap<String, String>(){{
+        put("tecnico", "Tecnico");
+        put("tecnologo", "Tecnologo");
+        put("profesional", "Profesional");
+        put("maestria", "Maestria");
+        put("doctorado", "Doctorado");
+    }};
+
 
     public Empleado(int id, int cedula, String nombre, int tel, Cargo cargo, String nivel_profesional, int salario) {
         this.id = id;
