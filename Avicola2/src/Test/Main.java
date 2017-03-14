@@ -23,6 +23,12 @@ public class Main {
         Veterinario veterinario1 = new Veterinario("", 10,1, 1113650449, "Luis Salamanca", 3123212, cargo1, "Profesional", 3000000);
         Curso curso1 = new Curso(1, "Manejo de Gallinas", "Manejador de gallinas","Instituto", 1,20,veterinario1);
         
+        Granja granja1 = new Granja(1, 30, area1, empleado1);
+        
+        Galpon galpon1 = new Galpon(1, 123456, "levante", 20, granja1, empleado1);
+        
+        Lote lote1 = new Lote(1, 1234, 30, 32323);
+        
         System.out.println(veterinario1.getCursos().size());
         //System.out.println(cargo1.getEmpleados().size());
         HashSet<Empleado> as = cargo1.getEmpleados();

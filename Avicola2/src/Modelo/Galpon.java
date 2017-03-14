@@ -17,9 +17,8 @@ public class Galpon {
     private int capacidad_max_gallinas;
     private Granja granja; 
     private Empleado responsable; 
-    private HashSet lotes; 
     private HashSet eventosGalpon; 
-     private HashSet gallinas; 
+    private HashSet gallinas; 
 
     public Galpon(int id, int codigo, String tipo_zona, int capacidad_max_gallinas, Granja granja, Empleado responsable) {
         this.id = id;
@@ -28,6 +27,11 @@ public class Galpon {
         this.capacidad_max_gallinas = capacidad_max_gallinas;
         this.granja = granja;
         this.responsable = responsable;
+        
+        this.gallinas = new HashSet();
+        this.eventosGalpon = new HashSet();
+        
+        this.granja.adicionarGalpon(this);
     }
 
 
@@ -98,9 +102,9 @@ public class Galpon {
     
     
     
-    public boolean adicionarLote(Lote lote){
-        return this.lotes.add(lote);
-    }
+    //public boolean adicionarLote(Lote lote){
+    //    return this.lotes.add(lote);
+    //}
     
      public boolean adicionarEventoGalpon(EventoGalpon eventoGalpon){
         return this.eventosGalpon.add(eventoGalpon);

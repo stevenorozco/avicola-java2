@@ -22,6 +22,8 @@ public class Lote {
         this.codigo = codigo;
         this.cantidad_gallinas = cantidad_gallinas;
         this.fecha_nacimiento_gallinas = fecha_nacimiento_gallinas;
+        
+        this.gallinas = new HashSet();
     }
 
     public int getId() {
