@@ -19,7 +19,12 @@ public class Galpon {
     private Empleado responsable; 
     private HashSet eventosGalpon; 
     private HashSet gallinas; 
-
+    
+    Map<String,String> RAZAS = new HashMap<String, String>(){{
+        put("levante", "Zona Levante");
+        put("produccion", "Zona Produccion");
+    }};
+    
     public Galpon(int id, int codigo, String tipo_zona, int capacidad_max_gallinas, Granja granja, Empleado responsable) {
         this.id = id;
         this.codigo = codigo;

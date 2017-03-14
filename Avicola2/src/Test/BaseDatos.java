@@ -4,21 +4,24 @@
  * and open the template in the editor.
  */
 package Test;
-import Modelo.*;
-import java.util.HashSet;
 
+import Modelo.Area;
+import Modelo.Cargo;
+import Modelo.Empresa;
 
 /**
  *
  * @author luissalamanca
  */
-public class Main {
+public class BaseDatos {
+    public Empresa empresa = new Empresa(1, "Avicola");
     
-    public static void main(String[] args) {
-        System.out.println("Hello, Worldsss!");
-        
-        Empresa empresa = new Empresa(1, "Avicola");
-        
+    public BaseDatos(){
+        crearAreasYCargos();
+    }
+    
+    
+    public void crearAreasYCargos(){
         Area area_granja = new Area(1,"produccion", "Granja",false, empresa);
         Area area_planta_alimentos = new Area(2,"produccion", "Planta de Alimentos",false, empresa);
 
@@ -49,32 +52,5 @@ public class Main {
 
         Cargo cargo_jefe_ventas = new Cargo(13, "Jefe de Ventas", area_ventas);
         Cargo cargo_analista_ventas = new Cargo(14, "Analista de Ventas", area_ventas);
-        
-        //Creamos las areas de produccion
-        
-        Empleado empleado1 = new Empleado(1, 1113650449, "Luis Salamanca", 3123212, cargo_galponero, "Profesional", 3000000);
-        Veterinario veterinario1 = new Veterinario("", 10,1, 1113650449, "Luis Salamanca", 3123212, cargo_veterinario, "Profesional", 3000000);
-        Curso curso1 = new Curso(1, "Manejo de Gallinas", "Manejador de gallinas","Instituto", 1,20,veterinario1);
-        
-        Granja granja1 = new Granja(1, 30, area_granja, empleado1);
-        Galpon galpon1 = new Galpon(1, 123456, "levante", 20, granja1, empleado1);
-        Lote lote1 = new Lote(1, 1234, 30, 32323);
-        
-        
-        Gallina gallina1 = new Gallina(1, 1234, "black_rock", 1, "", lote1);
-        Vacuna vacuna1_gallina1 = new Vacuna(1, "ZTH-011", "Ninguna novedad", 123, veterinario1, gallina1);
-        Vacuna vacuna2_gallina1 = new Vacuna(2, "POW-011", "Ninguna novedad", 125, veterinario1, gallina1);
-        Tratamiento tratamiento1_gallina1 = new Tratamiento(1, "Se aplica plan nutricional", 129, gallina1);
-        
-        Gallina gallina2 = new Gallina(2, 1235, "black_rock", 1, "", lote1);
-        Gallina gallina3 = new Gallina(3, 1236, "black_rock", 1, "", lote1);
-        Gallina gallina4 = new Gallina(4, 1236, "black_rock", 1, "", lote1);
-        
-        System.out.println(lote1.getGallinas().size());
-        //System.out.println(cargo1.getEmpleados().size());
-        HashSet<Empleado> as = cargo_galponero.getEmpleados();
-        for (Empleado obj : as) {
-            System.out.println(obj.getNombre());
-        } 
     }
 }
