@@ -35,10 +35,15 @@ public class Principal extends javax.swing.JFrame {
         jMenAreas = new javax.swing.JMenuItem();
         JMniCargos = new javax.swing.JMenuItem();
         jMniEmpleados = new javax.swing.JMenuItem();
-        jMenuItem4 = new javax.swing.JMenuItem();
-        jMenuItem6 = new javax.swing.JMenuItem();
+        jMnICursos = new javax.swing.JMenuItem();
         jMenu2 = new javax.swing.JMenu();
-        jMenuItem5 = new javax.swing.JMenuItem();
+        jMnIGranjas = new javax.swing.JMenuItem();
+        jMnIGalpones = new javax.swing.JMenuItem();
+        jMnIEventosGalpones = new javax.swing.JMenuItem();
+        jMnILote = new javax.swing.JMenuItem();
+        jMnIGallinas = new javax.swing.JMenuItem();
+        jMnIVacunas = new javax.swing.JMenuItem();
+        jMnITratamientos = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -53,7 +58,8 @@ public class Principal extends javax.swing.JFrame {
             .addGap(0, 412, Short.MAX_VALUE)
         );
 
-        jMenAdmin.setText("Administrador");
+        jMenAdmin.setText("Administracion");
+        jMenAdmin.setToolTipText("");
 
         jMenAreas.setText("Areas");
         jMenAreas.addActionListener(new java.awt.event.ActionListener() {
@@ -79,33 +85,48 @@ public class Principal extends javax.swing.JFrame {
         });
         jMenAdmin.add(jMniEmpleados);
 
-        jMenuItem4.setText("Galpoń");
-        jMenuItem4.addActionListener(new java.awt.event.ActionListener() {
+        jMnICursos.setText("Cursos");
+        jMnICursos.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem4ActionPerformed(evt);
+                jMnICursosActionPerformed(evt);
             }
         });
-        jMenAdmin.add(jMenuItem4);
-
-        jMenuItem6.setText("jMen");
-        jMenuItem6.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem6ActionPerformed(evt);
-            }
-        });
-        jMenAdmin.add(jMenuItem6);
+        jMenAdmin.add(jMnICursos);
 
         jMenuBar1.add(jMenAdmin);
 
-        jMenu2.setText("Administración");
+        jMenu2.setText("Produccion");
 
-        jMenuItem5.setText("Empleado");
-        jMenuItem5.addActionListener(new java.awt.event.ActionListener() {
+        jMnIGranjas.setText("Granjas");
+        jMnIGranjas.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem5ActionPerformed(evt);
+                jMnIGranjasActionPerformed(evt);
             }
         });
-        jMenu2.add(jMenuItem5);
+        jMenu2.add(jMnIGranjas);
+
+        jMnIGalpones.setText("Galpones");
+        jMenu2.add(jMnIGalpones);
+
+        jMnIEventosGalpones.setText("Eventos Galpones");
+        jMenu2.add(jMnIEventosGalpones);
+
+        jMnILote.setText("Lotes");
+        jMenu2.add(jMnILote);
+
+        jMnIGallinas.setText("Gallinas");
+        jMenu2.add(jMnIGallinas);
+
+        jMnIVacunas.setText("Vacunas");
+        jMenu2.add(jMnIVacunas);
+
+        jMnITratamientos.setText("Tratamientos");
+        jMnITratamientos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMnITratamientosActionPerformed(evt);
+            }
+        });
+        jMenu2.add(jMnITratamientos);
 
         jMenuBar1.add(jMenu2);
 
@@ -132,15 +153,15 @@ public class Principal extends javax.swing.JFrame {
         
     }//GEN-LAST:event_jMenAreasActionPerformed
 
-    private void jMenuItem4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem4ActionPerformed
+    private void jMnICursosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMnICursosActionPerformed
         // TODO add your handling code here:
         
-    }//GEN-LAST:event_jMenuItem4ActionPerformed
+    }//GEN-LAST:event_jMnICursosActionPerformed
 
-    private void jMenuItem5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem5ActionPerformed
+    private void jMnIGranjasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMnIGranjasActionPerformed
         // TODO add your handling code here:
         
-    }//GEN-LAST:event_jMenuItem5ActionPerformed
+    }//GEN-LAST:event_jMnIGranjasActionPerformed
 
     private void JMniCargosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JMniCargosActionPerformed
         // TODO add your handling code here:
@@ -157,9 +178,9 @@ public class Principal extends javax.swing.JFrame {
         a.show(); 
     }//GEN-LAST:event_jMniEmpleadosActionPerformed
 
-    private void jMenuItem6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem6ActionPerformed
+    private void jMnITratamientosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMnITratamientosActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jMenuItem6ActionPerformed
+    }//GEN-LAST:event_jMnITratamientosActionPerformed
 
     /**
      * @param args the command line arguments
@@ -203,9 +224,14 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenAreas;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenuBar jMenuBar1;
-    private javax.swing.JMenuItem jMenuItem4;
-    private javax.swing.JMenuItem jMenuItem5;
-    private javax.swing.JMenuItem jMenuItem6;
+    private javax.swing.JMenuItem jMnICursos;
+    private javax.swing.JMenuItem jMnIEventosGalpones;
+    private javax.swing.JMenuItem jMnIGallinas;
+    private javax.swing.JMenuItem jMnIGalpones;
+    private javax.swing.JMenuItem jMnIGranjas;
+    private javax.swing.JMenuItem jMnILote;
+    private javax.swing.JMenuItem jMnITratamientos;
+    private javax.swing.JMenuItem jMnIVacunas;
     private javax.swing.JMenuItem jMniEmpleados;
     // End of variables declaration//GEN-END:variables
 }
