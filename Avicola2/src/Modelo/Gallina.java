@@ -16,10 +16,10 @@ public class Gallina {
     private String raza;
     private int fecha_nacimiento; 
     private String proceso; 
-    private HashSet galpon; 
-    private HashSet lote; 
+    private Galpon galpon; 
+    private Lote lote; 
 
-    public Gallina(int id, int codigo, String raza, int fecha_nacimiento, String proceso, HashSet galpon, HashSet lote) {
+    public Gallina(int id, int codigo, String raza, int fecha_nacimiento, String proceso, Galpon galpon, Lote lote) {
         this.id = id;
         this.codigo = codigo;
         this.raza = raza;
@@ -69,19 +69,19 @@ public class Gallina {
         this.proceso = proceso;
     }
 
-    public HashSet getGalpon() {
-        return galpon;
+    public Galpon getGalpon() {
+        return this.galpon;
     }
 
-    public void setGalpon(HashSet galpon) {
+    public void setGalpon(Galpon galpon) {
         this.galpon = galpon;
     }
 
-    public HashSet getLote() {
-        return lote;
+    public Lote getLote() {
+        return this.lote;
     }
 
-    public void setLote(HashSet lote) {
+    public void setLote(Lote lote) {
         this.lote = lote;
     }
     

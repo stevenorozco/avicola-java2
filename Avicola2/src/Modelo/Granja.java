@@ -13,10 +13,10 @@ import java.util.*;
 public class Granja {
     private int id; 
     private int capacidad_max_gallinas;
-    private  HashSet area; 
-    private HashSet jefe; 
+    private  Area area; 
+    private Empleado jefe; 
 
-    public Granja(int id, int capacidad_max_gallinas, HashSet area, HashSet jefe) {
+    public Granja(int id, int capacidad_max_gallinas, Area area, Empleado jefe) {
         this.id = id;
         this.capacidad_max_gallinas = capacidad_max_gallinas;
         this.area = area;
@@ -39,19 +39,19 @@ public class Granja {
         this.capacidad_max_gallinas = capacidad_max_gallinas;
     }
 
-    public HashSet getArea() {
+    public Area getArea() {
         return area;
     }
 
-    public void setArea(HashSet area) {
+    public void setArea(Area area) {
         this.area = area;
     }
 
-    public HashSet getJefe() {
+    public Empleado getJefe() {
         return jefe;
     }
 
-    public void setJefe(HashSet jefe) {
+    public void setJefe(Empleado jefe) {
         this.jefe = jefe;
     }
     

@@ -14,9 +14,9 @@ public class Tratamiento {
     private int id;
     private String descripcion; 
     private int fecha; 
-    private HashSet gallina; 
+    private Gallina gallina; 
 
-    public Tratamiento(int id, String descripcion, int fecha, HashSet gallina) {
+    public Tratamiento(int id, String descripcion, int fecha, Gallina gallina) {
         this.id = id;
         this.descripcion = descripcion;
         this.fecha = fecha;
@@ -47,11 +47,11 @@ public class Tratamiento {
         this.fecha = fecha;
     }
 
-    public HashSet getGallina() {
-        return gallina;
+    public Gallina getGallina() {
+        return this.gallina;
     }
 
-    public void setGallina(HashSet gallina) {
+    public void setGallina(Gallina gallina) {
         this.gallina = gallina;
     }
     

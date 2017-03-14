@@ -17,7 +17,7 @@ public class Curso {
     private String intitucion; 
     private int fecha; 
     private int intensidad_horaria; 
-    private HashSet veterinario; 
+    private Empleado veterinario; 
     
     
 }

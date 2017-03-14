@@ -14,9 +14,9 @@ public class EventoGalpon {
     private int id; 
     private String descripcion; 
     private int fecha; 
-    private HashSet galpon; 
+    private Galpon galpon; 
 
-    public EventoGalpon(int id, String descripcion, int fecha, HashSet galpon) {
+    public EventoGalpon(int id, String descripcion, int fecha, Galpon galpon) {
         this.id = id;
         this.descripcion = descripcion;
         this.fecha = fecha;
@@ -47,11 +47,11 @@ public class EventoGalpon {
         this.fecha = fecha;
     }
 
-    public HashSet getGalpon() {
-        return galpon;
+    public Galpon getGalpon() {
+        return this.galpon;
     }
 
-    public void setGalpon(HashSet galpon) {
+    public void setGalpon(Galpon galpon) {
         this.galpon = galpon;
     }
     

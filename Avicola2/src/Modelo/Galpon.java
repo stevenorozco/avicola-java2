@@ -15,10 +15,10 @@ public class Galpon {
     private int codigo; 
     private String tipo_zona;
     private int capacidad_max_gallinas;
-    private HashSet granja; 
-    private HashSet responsable; 
+    private Granja granja; 
+    private Empleado responsable; 
 
-    public Galpon(int id, int codigo, String tipo_zona, int capacidad_max_gallinas, HashSet granja, HashSet responsable) {
+    public Galpon(int id, int codigo, String tipo_zona, int capacidad_max_gallinas, Granja granja, Empleado responsable) {
         this.id = id;
         this.codigo = codigo;
         this.tipo_zona = tipo_zona;
@@ -59,19 +59,19 @@ public class Galpon {
         this.capacidad_max_gallinas = capacidad_max_gallinas;
     }
 
-    public HashSet getGranja() {
-        return granja;
+    public Granja getGranja() {
+        return this.granja;
     }
 
-    public void setGranja(HashSet granja) {
+    public void setGranja(Granja granja) {
         this.granja = granja;
     }
 
-    public HashSet getResponsable() {
-        return responsable;
+    public Empleado getResponsable() {
+        return this.responsable;
     }
 
-    public void setResponsable(HashSet responsable) {
+    public void setResponsable(Empleado responsable) {
         this.responsable = responsable;
     }
     
